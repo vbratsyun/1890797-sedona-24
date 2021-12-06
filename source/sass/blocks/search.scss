@@ -1,0 +1,49 @@
+.search__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.search__title--view {
+  margin-top: 35px;
+}
+
+.search__description {
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $lightblack;
+  max-width: 261px;
+}
+
+.search__description--view {
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.search__button {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.search__button--view {
+  padding: 15px 0;
+  margin-bottom: 49px;
+  background-color: $blue-gray;
+}
+
+.search__image--view {
+  margin: 0 auto;
+}

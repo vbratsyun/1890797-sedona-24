@@ -1,0 +1,29 @@
+.promo {
+  max-width: 260px;
+}
+
+.promo__description {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.promo__description--view {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.promo__sub-description {
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.promo__sub-description--view {
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $lightblack;
+}

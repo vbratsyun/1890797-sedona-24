@@ -1,0 +1,70 @@
+.advantage__item {
+  text-align: center;
+  padding-top: 26px;
+
+  &--first {
+    padding-top: 0;
+  }
+
+  &--gray {
+    background-color: $gray;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.advantage__item-container-view {
+  padding: 55px 20px 39px 18px;
+  background-color: $blue-gray;
+}
+
+.advantage__item--city {
+  width: 210px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.advantage__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+  &--light {
+    color: $white;
+  }
+
+  &--dark {
+    color: $black;
+  }
+
+  &--dark-city {
+    padding-bottom: 10px;
+  }
+}
+
+.advantage__number,
+.advantage__description {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+  &--light {
+    color: $white;
+  }
+
+  &--dark {
+    color: $black;
+  }
+}
+
+.advantage__number {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.advantage__image {
+  margin: 0 auto;
+}

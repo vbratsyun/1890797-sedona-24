@@ -1,0 +1,13 @@
+.site-list__link {
+  display: block;
+}
+
+.site-list__link--view {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: $white;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
