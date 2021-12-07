@@ -1,0 +1,22 @@
+.form__fieldset-container {
+  margin-bottom: 20px;
+
+  &--patronymic {
+    margin-bottom: 25px;
+  }
+
+  &--contacts {
+    margin-bottom: 14px;
+  }
+
+  &--mail {
+    margin-bottom: 28px;
+  }
+}
+
+.form__button {
+  margin-top: 51px;
+  margin-bottom: 48px;
+  padding-top: 19px;
+  padding-bottom: 14px;
+}

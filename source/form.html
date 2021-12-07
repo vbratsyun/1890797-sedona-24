@@ -8,7 +8,7 @@
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo header-logo">
         <img
           src="img/logotype-mobile.svg"
           width="102"
@@ -20,31 +20,33 @@
         <button class="page-nav__toggle toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <!-- <div class="page-nav__wrapper"> -->
-        <ul class="page-nav__site-list site-list">
+        <ul class="page-nav__site-list site-list list">
           <li class="site-list__item site-list__item--current">
-            <a class="site-list__link">Главная</a>
+            <a class="site-list__link nav-link link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+            <a class="site-list__link nav-link link" href="catalog.html"
+              >Фото и видео</a
+            >
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Форма Отзыва</a>
+            <a class="site-list__link nav-link link" href="form.html"
+              >Форма Отзыва</a
+            >
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML ACADEMY</a>
+            <a class="site-list__link nav-link link" href="#">HTML ACADEMY</a>
           </li>
         </ul>
-        <!-- </div> -->
       </nav>
     </header>
     <!-- Form  -->
     <main class="page-form">
-      <h1 class="vissually-hidden">Впечатления от посещения города Седоны</h1>
+      <h1 class="visually-hidden">Впечатления от посещения города Седоны</h1>
       <section class="page-form__promo promo">
         <h2 class="visually-hidden">Отзыв об оказанных услугах</h2>
-        <p class="promo__ description">Оставьте свой отзыв</p>
-        <p class="promo__sub-description">
+        <p class="promo__description promo-description">Оставьте свой отзыв</p>
+        <p class="promo__sub-description promo-sub-description">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
           посещенных вами достопримечательностях
         </p>
@@ -52,12 +54,15 @@
       <section class="page-form__form">
         <h2 class="visually-hidden">Форма для заполнения</h2>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__fieldset fieldset fieldset--customer">
-            <legend class="fieldset__title">Представьтесь:</legend>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="name">Имя*:</label
+          <fieldset class="form__fieldset fieldset">
+            <legend class="fieldset__title fieldset-title">
+              Представьтесь:
+            </legend>
+            <div class="form__fieldset-container fieldset-container">
+              <label class="fieldset__label fieldset-label" for="name"
+                >Имя*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__input fieldset-input"
                 type="text"
                 name="name"
                 id="name"
@@ -65,10 +70,11 @@
                 required
               />
             </div>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="surname">Фамилия*:</label
+            <div class="form__fieldset-container fieldset-container">
+              <label class="fieldset__label fieldset-label" for="surname"
+                >Фамилия*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__input fieldset-input"
                 type="text"
                 name="surname"
                 id="surname"
@@ -76,10 +82,17 @@
                 required
               />
             </div>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="patronymic">Отчество:</label
+            <div
+              class="
+                form__fieldset-container
+                fieldset-container
+                form__fieldset-container--patronymic
+              "
+            >
+              <label class="fieldset__label fieldset-label" for="patronymic"
+                >Отчество:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__input fieldset-input"
                 type="text"
                 name="patronymic"
                 id="patronymic"
@@ -87,13 +100,17 @@
               />
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--contacts">
-            <legend class="fieldset__title">Контактная информация:</legend>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="phone"
+          <fieldset class="form__fieldset fieldset">
+            <legend
+              class="fieldset__title fieldset-title fieldset__title--contacts"
+            >
+              Контактная информация:
+            </legend>
+            <div class="form__fieldset-container--contacts">
+              <label class="fieldset__label fieldset-label" for="phone"
                 >Контактный телефон*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__input fieldset-input"
                 type="tel"
                 name="phone"
                 id="phone"
@@ -102,11 +119,11 @@
                 required
               />
             </div>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="email"
+            <div class="form__fieldset-container--mail">
+              <label class="fieldset__label fieldset-label" for="email"
                 >Электронная почта*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__input fieldset-input"
                 type="email"
                 name="email"
                 id="email"
@@ -115,11 +132,15 @@
               />
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--radio">
-            <legend class="fieldset__title">Ваше общее впечатление:</legend>
-            <ul class="fieldset__list">
+          <fieldset class="form__fieldset fieldset">
+            <legend
+              class="fieldset__title fieldset-title fieldset__title--impression"
+            >
+              Ваше общее впечатление:
+            </legend>
+            <ul class="fieldset__list list">
               <li class="fieldset__item">
-                <label class="fieldset__control"
+                <label class="fieldset__control fieldset-control"
                   ><input
                     class="visually-hidden"
                     type="radio"
@@ -132,7 +153,7 @@
                 </label>
               </li>
               <li class="fieldset__item">
-                <label class="fieldset__control"
+                <label class="fieldset__control fieldset-control"
                   ><input
                     class="visually-hidden"
                     type="radio"
@@ -144,7 +165,12 @@
                 </label>
               </li>
               <li class="fieldset__item">
-                <label class="fieldset__control"
+                <label
+                  class="
+                    fieldset__control
+                    fieldset-control
+                    fieldset__control--not-defined
+                  "
                   ><input
                     class="visually-hidden"
                     type="radio"
@@ -157,13 +183,21 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--checkbox">
-            <legend class="fieldset__title">
+          <fieldset class="form__fieldset fieldset">
+            <legend
+              class="fieldset__title fieldset-title fieldset__title--attraction"
+            >
               Посещенные достопримечательности:
             </legend>
-            <ul class="fieldset__list">
+            <ul class="fieldset__list list">
               <li class="fieldset__item">
-                <label class="control">
+                <label
+                  class="
+                    fieldset__control
+                    fieldset-control
+                    fieldset__control--attraction
+                  "
+                >
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -189,7 +223,13 @@
                 </label>
               </li>
               <li class="fieldset__item">
-                <label class="control">
+                <label
+                  class="
+                    fieldset__control
+                    fieldset-control
+                    fieldset__control--attraction
+                  "
+                >
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -215,7 +255,13 @@
                 </label>
               </li>
               <li class="fieldset__item">
-                <label class="control">
+                <label
+                  class="
+                    fieldset__control
+                    fieldset-control
+                    fieldset__control--attraction
+                  "
+                >
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -241,7 +287,13 @@
                 </label>
               </li>
               <li class="fieldset__item">
-                <label class="control">
+                <label
+                  class="
+                    fieldset__control
+                    fieldset-control
+                    fieldset__control--red-rocks
+                  "
+                >
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -267,48 +319,52 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--textarea">
-            <legend class="fieldset__title">Опишите свои эмоции:</legend>
+          <fieldset class="form__fieldset fieldset">
+            <legend
+              class="fieldset__title fieldset-title fieldset__title--emotions"
+            >
+              Опишите свои эмоции:
+            </legend>
             <textarea
+              class="fieldset__textarea fieldset-textarea"
               name="description-of-emotions"
               cols="30"
               rows="10"
               placeholder="Опишите подробно все свои восторги"
             ></textarea>
           </fieldset>
-          <div class="form__button-form">
-            <button class="button-form button" type="submit">
-              Отправить отзыв
-            </button>
-            <p class="form__required-fields">* — обязательные поля</p>
-          </div>
+          <button class="form__button button-view button" type="submit">
+            Отправить отзыв
+          </button>
+          <p class="form__required-fields required-fields">
+            * — обязательные поля
+          </p>
         </form>
       </section>
     </main>
     <!-- Footer  -->
     <footer class="page-footer">
-      <!-- <div class="page-footer__wrapper"> -->
       <div class="page-footer__social social">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="social__link social__link--hashtag" href="#">#visitSEDONA</a>
-        <ul class="page-footer__social social-list">
+        <a class="social__hashtag social-hashtag link" href="#">#visitSEDONA</a>
+        <ul class="page-footer__social-list social-list list">
           <li class="social__item">
             <a
-              class="social__link social__link--twitter"
+              class="social__link social-link link"
               href="http://twitter.com/htmlacademy_ru"
               >Мы в Твиттере</a
             >
           </li>
           <li class="social__item">
             <a
-              class="social__link social__link--facebook"
+              class="social__link social-link link"
               href="http://facebook.com/htmlacademy"
               >Мы в Фейсбуке</a
             >
           </li>
           <li class="social__item">
             <a
-              class="social__link social__link--youtube"
+              class="social__link social-link link"
               href="http://youtube.com/user/htmlacademyru"
               >Мы на Ютубе</a
             >
@@ -316,7 +372,7 @@
         </ul>
       </div>
       <div class="page-footer__copiright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <span class="copyright__text">Разработано: </span>
         <a class="copyright__link" href="https://htmlacademy.ru/">
           <svg
             class="copyright__htmlacademy-icon"
@@ -334,7 +390,6 @@
             /></svg
         ></a>
       </div>
-      <!-- </div> -->
     </footer>
   </body>
 </html>

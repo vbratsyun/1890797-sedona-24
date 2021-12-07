@@ -1,13 +1,14 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .copyright__text {
   line-height: 26px;
   font-weight: 400;
-  text-align: center;
   text-transform: uppercase;
   color: $black;
-  display: block;
   min-width: 121px;
-}
-
-.copyright__link {
-  display: block;
+  text-align: center;
 }

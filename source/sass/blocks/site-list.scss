@@ -1,13 +1,9 @@
-.site-list__link {
-  display: block;
+.site-list {
+  display: none;
+  background-color: $blue-gray;
 }
 
-.site-list__link--view {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 40px;
-  color: $white;
-  text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 5px;
+.site-list__link {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
