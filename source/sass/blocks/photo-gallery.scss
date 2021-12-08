@@ -1,0 +1,54 @@
+.photo-gallery {
+  margin-bottom: 32px;
+}
+
+.photo-gallery__list {
+  @include list();
+}
+
+.photo-gallery__item {
+  padding-top: 22px;
+  padding-bottom: 15px;
+}
+
+.photo-gallery__item:last-child {
+  padding-bottom: 0;
+}
+
+.photo-gallery__image {
+  margin-bottom: 11px;
+}
+
+.photo-gallery__title {
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0;
+}
+
+.photo-gallery__author {
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.photo-gallery__reaction {
+  display: flex;
+}
+.photo-gallery__reaction-icon {
+  margin-right: 14px;
+}
+
+.photo-gallery__reaction-likes {
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0;
+}
+
+.page-catalog__video-gallery {
+  margin-top: 32px;
+  margin-bottom: 76px;
+}

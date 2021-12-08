@@ -1,1 +1,27 @@
+.page-nav__site-list {
+  display: none;
+  background-color: $blue-gray;
 
+  @include list();
+}
+
+.page-nav__site-list-item {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.page-nav__site-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.page-nav__site-list-link {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include link();
+}
