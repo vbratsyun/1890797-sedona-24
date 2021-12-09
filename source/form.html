@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo">
         <img
           src="img/logotype-mobile.svg"
           width="102"
@@ -15,48 +16,50 @@
           alt="Логотип сайта Седона."
         />
       </a>
-      <nav class="page-nav">
-        <button class="page-nav__toggle toggle" type="button">
+      <nav class="page-header__nav page-nav">
+        <button class="page-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <!-- <div class="page-nav__wrapper"> -->
-        <ul class="page-nav__site-list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link">Главная</a>
+        <ul class="page-nav__site-list">
+          <li class="page-nav__site-list-item site-list__item--current">
+            <a class="page-nav__site-list-link">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+          <li class="page-nav__site-list-item">
+            <a class="page-nav__site-list-link" href="catalog.html"
+              >Фото и видео</a
+            >
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Форма Отзыва</a>
+          <li class="page-nav__site-list-item">
+            <a class="page-nav__site-list-link" href="form.html"
+              >Форма Отзыва</a
+            >
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML ACADEMY</a>
+          <li class="page-nav__site-list-item">
+            <a class="page-nav__site-list-link" href="#">HTML ACADEMY</a>
           </li>
         </ul>
-        <!-- </div> -->
       </nav>
     </header>
     <!-- Form  -->
     <main class="page-form">
-      <h1 class="vissually-hidden">Впечатления от посещения города Седоны</h1>
+      <h1 class="visually-hidden">Впечатления от посещения города Седоны</h1>
       <section class="page-form__promo promo">
         <h2 class="visually-hidden">Отзыв об оказанных услугах</h2>
-        <p class="promo__ description">Оставьте свой отзыв</p>
+        <p class="promo__description">Оставьте свой отзыв</p>
         <p class="promo__sub-description">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
           посещенных вами достопримечательностях
         </p>
       </section>
-      <section class="page-form__form">
+      <section class="form-container">
         <h2 class="visually-hidden">Форма для заполнения</h2>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__fieldset fieldset fieldset--customer">
+          <fieldset class="form__fieldset fieldset">
             <legend class="fieldset__title">Представьтесь:</legend>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="name">Имя*:</label
+            <div class="fieldset__container fieldset__container-personality">
+              <label class="fieldset__container-label" for="name">Имя*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__container-input"
                 type="text"
                 name="name"
                 id="name"
@@ -64,10 +67,11 @@
                 required
               />
             </div>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="surname">Фамилия*:</label
+            <div class="fieldset__container fieldset__container-personality">
+              <label class="fieldset__container-label" for="surname"
+                >Фамилия*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__container-input"
                 type="text"
                 name="surname"
                 id="surname"
@@ -75,10 +79,11 @@
                 required
               />
             </div>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="patronymic">Отчество:</label
+            <div class="fieldset__container fieldset__container-personality">
+              <label class="fieldset__container-label" for="patronymic"
+                >Отчество:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__container-input"
                 type="text"
                 name="patronymic"
                 id="patronymic"
@@ -86,13 +91,19 @@
               />
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--contacts">
-            <legend class="fieldset__title">Контактная информация:</legend>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="phone"
+          <fieldset class="form__fieldset fieldset">
+            <legend class="fieldset__title fieldset__title-contacts">
+              Контактная информация:
+            </legend>
+            <div class="fieldset__container fieldset__container-phone">
+              <label
+                class="
+                  fieldset__container-label fieldset__container-label-contacts
+                "
+                for="phone"
                 >Контактный телефон*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__container-input"
                 type="tel"
                 name="phone"
                 id="phone"
@@ -101,11 +112,15 @@
                 required
               />
             </div>
-            <div class="fieldset-input-label">
-              <label class="fieldset__label" for="email"
+            <div class="fieldset__container fieldset__container-email">
+              <label
+                class="
+                  fieldset__container-label fieldset__container-label-contacts
+                "
+                for="email"
                 >Электронная почта*:</label
               ><input
-                class="fieldset__input"
+                class="fieldset__container-input"
                 type="email"
                 name="email"
                 id="email"
@@ -114,10 +129,10 @@
               />
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--radio">
+          <fieldset class="form__fieldset fieldset">
             <legend class="fieldset__title">Ваше общее впечатление:</legend>
             <ul class="fieldset__list">
-              <li class="fieldset__item">
+              <li class="fieldset__item-radio">
                 <label class="fieldset__control"
                   ><input
                     class="visually-hidden"
@@ -126,11 +141,13 @@
                     value="positive"
                     checked
                   />
-                  <span class="control-mark"></span>
-                  <span class="control-label">Скорее положительное</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label"
+                    >Скорее положительное</span
+                  >
                 </label>
               </li>
-              <li class="fieldset__item">
+              <li class="fieldset__item-radio">
                 <label class="fieldset__control"
                   ><input
                     class="visually-hidden"
@@ -138,11 +155,13 @@
                     name="impression"
                     value="negative"
                   />
-                  <span class="control-mark"></span>
-                  <span class="control-label">Скорее отрицательное</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label"
+                    >Скорее отрицательное</span
+                  >
                 </label>
               </li>
-              <li class="fieldset__item">
+              <li class="fieldset__item-radio">
                 <label class="fieldset__control"
                   ><input
                     class="visually-hidden"
@@ -150,19 +169,21 @@
                     name="impression"
                     value="not-defined"
                   />
-                  <span class="control-mark"></span>
-                  <span class="control-label">Затрудняюсь ответить</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label"
+                    >Затрудняюсь ответить</span
+                  >
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--checkbox">
+          <fieldset class="form__fieldset fieldset">
             <legend class="fieldset__title">
               Посещенные достопримечательности:
             </legend>
             <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <label class="control">
+              <li class="fieldset__item-checkbox">
+                <label class="fieldset__control">
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -183,12 +204,12 @@
                       fill="#000"
                     />
                   </svg>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Мост Дьявола</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label">Мост Дьявола</span>
                 </label>
               </li>
-              <li class="fieldset__item">
-                <label class="control">
+              <li class="fieldset__item-checkbox">
+                <label class="fieldset__control">
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -209,12 +230,12 @@
                       fill="#000"
                     />
                   </svg>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Гора-Колокол</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label">Гора-Колокол</span>
                 </label>
               </li>
-              <li class="fieldset__item">
-                <label class="control">
+              <li class="fieldset__item-checkbox">
+                <label class="fieldset__control">
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -235,12 +256,12 @@
                       fill="#000"
                     />
                   </svg>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Слайд-парк</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label">Слайд-парк</span>
                 </label>
               </li>
-              <li class="fieldset__item">
-                <label class="control">
+              <li class="fieldset__item-checkbox">
+                <label class="fieldset__control">
                   <input
                     class="visually-hidden"
                     type="checkbox"
@@ -260,65 +281,60 @@
                       fill="#000"
                     />
                   </svg>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Красные скалы</span>
+                  <span class="fieldset__control-mark"></span>
+                  <span class="fieldset__control-label">Красные скалы</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--textarea">
+          <fieldset class="form__fieldset fieldset form__fieldset-textarea">
             <legend class="fieldset__title">Опишите свои эмоции:</legend>
             <textarea
+              class="fieldset__textarea"
               name="description-of-emotions"
               cols="30"
               rows="10"
               placeholder="Опишите подробно все свои восторги"
             ></textarea>
           </fieldset>
-          <div class="form__button-form">
-            <button class="button-form button" type="submit">
-              Отправить отзыв
-            </button>
-            <p class="form__required-fields">* — обязательные поля</p>
-          </div>
+          <button class="form__button button" type="submit">
+            Отправить отзыв
+          </button>
+          <p class="form__required-fields">* — обязательные поля</p>
         </form>
       </section>
     </main>
     <!-- Footer  -->
     <footer class="page-footer">
-      <!-- <div class="page-footer__wrapper"> -->
-      <div class="page-footer__social social">
-        <h2 class="visually-hidden">Контакты</h2>
-        <a class="social__link social__link--hashtag" href="#">#visitSEDONA</a>
-        <ul class="page-footer__social social-list">
-          <li class="social__item">
-            <a
-              class="social__link social__link--twitter"
-              href="http://twitter.com/htmlacademy_ru"
-              >Мы в Твиттере</a
-            >
-          </li>
-          <li class="social__item">
-            <a
-              class="social__link social__link--facebook"
-              href="http://facebook.com/htmlacademy"
-              >Мы в Фейсбуке</a
-            >
-          </li>
-          <li class="social__item">
-            <a
-              class="social__link social__link--youtube"
-              href="http://youtube.com/user/htmlacademyru"
-              >Мы на Ютубе</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copiright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/">
+      <h2 class="visually-hidden">Контакты</h2>
+      <a class="page-footer__hashtag" href="#">#visitSEDONA</a>
+      <ul class="page-footer__social">
+        <li class="page-footer__social-item">
+          <a
+            class="page-footer__social-link"
+            href="http://twitter.com/htmlacademy_ru"
+            >Мы в Твиттере</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="page-footer__social-link"
+            href="http://facebook.com/htmlacademy"
+            >Мы в Фейсбуке</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="page-footer__social-link"
+            href="http://youtube.com/user/htmlacademyru"
+            >Мы на Ютубе</a
+          >
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <span class="page-footer__copyright-text">Разработано: </span>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
           <svg
-            class="copyright__htmlacademy-icon"
             aria-hidden="true"
             focusable="false"
             width="27"
@@ -333,7 +349,6 @@
             /></svg
         ></a>
       </div>
-      <!-- </div> -->
     </footer>
   </body>
 </html>

@@ -1,0 +1,15 @@
+.page {
+  height: 100%;
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  background-color: $white;
+  color: $lightblack;
+}

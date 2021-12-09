@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo">
         <img
           src="img/logotype-mobile.svg"
           width="102"
@@ -15,31 +16,33 @@
           alt="Логотип сайта Седона."
         />
       </a>
-      <nav class="page-nav">
-        <button class="page-nav__toggle toggle" type="button">
+      <nav class="page-header__nav page-nav">
+        <button class="page-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <!-- <div class="page-nav__wrapper"> -->
-        <ul class="page-nav__site-list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link">Главная</a>
+        <ul class="page-nav__site-list">
+          <li class="page-nav__site-list-item site-list__item--current">
+            <a class="page-nav__site-list-link">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+          <li class="page-nav__site-list-item">
+            <a class="page-nav__site-list-link" href="catalog.html"
+              >Фото и видео</a
+            >
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Форма Отзыва</a>
+          <li class="page-nav__site-list-item">
+            <a class="page-nav__site-list-link" href="form.html"
+              >Форма Отзыва</a
+            >
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML ACADEMY</a>
+          <li class="page-nav__site-list-item">
+            <a class="page-nav__site-list-link" href="#">HTML ACADEMY</a>
           </li>
         </ul>
-        <!-- </div> -->
       </nav>
     </header>
     <!-- Inner  -->
     <main class="page-catalog">
-      <h1 class="vissually-hidden">Фото- и видеогалерея города Седона</h1>
+      <h1 class="visually-hidden">Фото- и видеогалерея города Седона</h1>
       <section class="page-catalog__promo promo">
         <h2 class="visually-hidden">Путешествие в Седону</h2>
         <p class="promo__description">Фото и видео</p>
@@ -48,19 +51,44 @@
           забыть о политике и экономике.
         </p>
       </section>
-      <section class="page-catalog__photo-gallery photo-gallery">
+      <section class="photo-gallery">
         <h2 class="visually-hidden">
           Фотогалерея достопримечательностей Седоны
         </h2>
         <ul class="photo-gallery__list">
           <li class="photo-gallery__item">
-            <img src="img/gallery/spaces.jpg" width="280" height="280" alt="" />
+            <img
+              class="photo-gallery__image"
+              src="img/gallery/spaces.jpg"
+              width="280"
+              height="280"
+              alt=""
+            />
             <h3 class="photo-gallery__title">Неродные просторы</h3>
             <p class="photo-gallery__author">Автор фото: Борис</p>
-            <p class="photo-gallery__likes">1350</p>
+            <div class="photo-gallery__reaction">
+              <svg
+                class="photo-gallery__reaction-icon"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="21"
+                viewBox="0 0 23 21"
+                fill="none"
+              >
+                <path
+                  opacity=".3"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  fill="#000"
+                />
+              </svg>
+              <span class="photo-gallery__reaction-likes">1350</span>
+            </div>
           </li>
           <li class="photo-gallery__item">
             <img
+              class="photo-gallery__image"
               src="img/gallery/vegetation.jpg"
               width="280"
               height="280"
@@ -68,10 +96,29 @@
             />
             <h3 class="photo-gallery__title">Местная растительность</h3>
             <p class="photo-gallery__author">Автор фото: Сергей</p>
-            <p class="photo-gallery__likes">143</p>
+            <div class="photo-gallery__reaction">
+              <svg
+                class="photo-gallery__reaction-icon"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="21"
+                viewBox="0 0 23 21"
+                fill="none"
+              >
+                <path
+                  opacity=".3"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  fill="#000"
+                />
+              </svg>
+              <span class="photo-gallery__reaction-likes">143</span>
+            </div>
           </li>
           <li class="photo-gallery__item">
             <img
+              class="photo-gallery__image"
               src="img/gallery/road-to-the-north.jpg"
               width="280"
               height="280"
@@ -79,10 +126,29 @@
             />
             <h3 class="photo-gallery__title">Дорога на север</h3>
             <p class="photo-gallery__author">Автор фото: Петр</p>
-            <p class="photo-gallery__likes">96</p>
+            <div class="photo-gallery__reaction">
+              <svg
+                class="photo-gallery__reaction-icon"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="21"
+                viewBox="0 0 23 21"
+                fill="none"
+              >
+                <path
+                  opacity=".3"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  fill="#000"
+                />
+              </svg>
+              <span class="photo-gallery__reaction-likes">96</span>
+            </div>
           </li>
           <li class="photo-gallery__item">
             <img
+              class="photo-gallery__image"
               src="img/gallery/devil's-bridge.jpg"
               width="280"
               height="280"
@@ -90,124 +156,139 @@
             />
             <h3 class="photo-gallery__title">Мост дьявола</h3>
             <p class="photo-gallery__author">Автор фото: Антон</p>
-            <p class="photo-gallery__likes">254</p>
+            <div class="photo-gallery__reaction">
+              <svg
+                class="photo-gallery__reaction-icon"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="21"
+                viewBox="0 0 23 21"
+                fill="none"
+              >
+                <path
+                  opacity=".3"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  fill="#000"
+                />
+              </svg>
+              <span class="photo-gallery__reaction-likes">254</span>
+            </div>
           </li>
         </ul>
-        <section class="video-gallery">
-          <h2 class="video-gallery__title">Все еще сомневаетесь?</h2>
-          <p class="video-gallery__description">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не
-            подорожали в очередной раз!
-          </p>
-          <video
-            src=""
-            width="320"
-            height="201"
-            poster="img/gallery/video-fragment.jpg"
-            preload="metadata"
-          ></video>
-          <div class="video-gallery__range range">
-            <div class="range__range-bar">
-              <button class="range__toggle" type="button">
-                <span class="visually-hidden">Ползуток длительности видео</span>
-              </button>
-            </div>
-          </div>
-          <div class="video-gallery__controls controls">
-            <button class="controls__button button" type="button">
-              <svg
-                class="controls__image"
-                aria-hidden="true"
-                focusable="false"
-                width="16"
-                height="20"
-                viewBox="0 0 16 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8 4V0L3 5l5 5V6c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6H0c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8Z"
-                  fill="#5C6870"
-                />
-              </svg>
-              <span class="visually-hidden">Воспроизведения</span>
-            </button>
-            <button class="controls__button button" type="button">
-              <svg
-                class="controls__image"
-                aria-hidden="true"
-                focusable="false"
-                width="32"
-                height="20"
-                viewBox="0 0 32 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M29 0H3C1.3 0 0 1.3 0 3v14c0 1.7 1.3 3 3 3h26c1.7 0 3-1.3 3-3V3c0-1.7-1.3-3-3-3ZM14.4 15.9c-.5.1-1.1.1-1.7.1-.7 0-1.4-.1-2-.3-.6-.2-1.2-.6-1.6-1-.4-.4-.8-1.1-1.1-1.9-.3-.8-.4-1.7-.4-2.8 0-1.1.2-2.1.5-2.9.3-.8.7-1.4 1.2-1.9s1.1-.8 1.7-1c.5-.1 1.2-.2 1.8-.2.7 0 1.2 0 1.7.1s.8.2 1.1.3l-.4 1.9-.9-.3H13c-.9 0-1.6.3-2.2 1-.6.7-.8 1.7-.8 3 0 .6.1 1.1.2 1.6s.3.9.6 1.3c.3.3.6.6 1 .8.4.2.9.3 1.4.3.5 0 .9 0 1.3-.1.3-.1.6-.2.9-.4l.5 1.8c-.5.3-1 .4-1.5.6Zm8.7 0c-.5.1-1.1.1-1.7.1-.7 0-1.4-.1-2-.3-.6-.2-1.2-.6-1.6-1-.5-.5-.9-1.1-1.1-1.9-.3-.8-.4-1.7-.4-2.8 0-1.1.2-2.1.5-2.9.3-.8.7-1.4 1.2-1.9s1.1-.8 1.7-1c.5-.1 1.2-.2 1.8-.2.7 0 1.2 0 1.7.1s.8.2 1.1.3l-.4 1.9L23 6h-1.3c-.9 0-1.6.3-2.2 1-.6.7-.8 1.7-.8 3 0 .6.1 1.1.2 1.6s.3.9.6 1.3c.3.3.6.6 1 .8.4.2.9.3 1.4.3.5 0 .9 0 1.3-.1.3-.1.6-.2.9-.4l.5 1.8c-.5.3-1 .4-1.5.6Z"
-                  fill="#5C6870"
-                />
-              </svg>
-              <span class="visually-hidden">Субтитры</span>
-            </button>
+      </section>
+      <section class="page-catalog__promo-presentation promo">
+        <h2 class="promo__description">Все еще сомневаетесь?</h2>
+        <p class="promo__sub-description">
+          Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали
+          в очередной раз!
+        </p>
+      </section>
+      <section class="presentation">
+        <h2 class="visually-hidden">Просмотр видеопрезентации</h2>
+        <video
+          src=""
+          width="320"
+          height="201"
+          poster="img/gallery/video-fragment.jpg"
+          preload="metadata"
+        ></video>
+        <div class="presentation__range range-bar">
+          <button class="range-bar__toggle" type="button">
+            <span class="visually-hidden">Ползуток длительности видео</span>
+          </button>
+        </div>
+        <div class="presentation__controls controls">
+          <button class="controls__button" type="button">
+            <svg
+              class="controls__image"
+              aria-hidden="true"
+              focusable="false"
+              width="16"
+              height="20"
+              viewBox="0 0 16 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 4V0L3 5l5 5V6c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6H0c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8Z"
+                fill="#5C6870"
+              />
+            </svg>
+            <span class="visually-hidden">Воспроизведения</span>
+          </button>
+          <button class="controls__button" type="button">
+            <svg
+              class="controls__image"
+              aria-hidden="true"
+              focusable="false"
+              width="32"
+              height="20"
+              viewBox="0 0 32 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29 0H3C1.3 0 0 1.3 0 3v14c0 1.7 1.3 3 3 3h26c1.7 0 3-1.3 3-3V3c0-1.7-1.3-3-3-3ZM14.4 15.9c-.5.1-1.1.1-1.7.1-.7 0-1.4-.1-2-.3-.6-.2-1.2-.6-1.6-1-.4-.4-.8-1.1-1.1-1.9-.3-.8-.4-1.7-.4-2.8 0-1.1.2-2.1.5-2.9.3-.8.7-1.4 1.2-1.9s1.1-.8 1.7-1c.5-.1 1.2-.2 1.8-.2.7 0 1.2 0 1.7.1s.8.2 1.1.3l-.4 1.9-.9-.3H13c-.9 0-1.6.3-2.2 1-.6.7-.8 1.7-.8 3 0 .6.1 1.1.2 1.6s.3.9.6 1.3c.3.3.6.6 1 .8.4.2.9.3 1.4.3.5 0 .9 0 1.3-.1.3-.1.6-.2.9-.4l.5 1.8c-.5.3-1 .4-1.5.6Zm8.7 0c-.5.1-1.1.1-1.7.1-.7 0-1.4-.1-2-.3-.6-.2-1.2-.6-1.6-1-.5-.5-.9-1.1-1.1-1.9-.3-.8-.4-1.7-.4-2.8 0-1.1.2-2.1.5-2.9.3-.8.7-1.4 1.2-1.9s1.1-.8 1.7-1c.5-.1 1.2-.2 1.8-.2.7 0 1.2 0 1.7.1s.8.2 1.1.3l-.4 1.9L23 6h-1.3c-.9 0-1.6.3-2.2 1-.6.7-.8 1.7-.8 3 0 .6.1 1.1.2 1.6s.3.9.6 1.3c.3.3.6.6 1 .8.4.2.9.3 1.4.3.5 0 .9 0 1.3-.1.3-.1.6-.2.9-.4l.5 1.8c-.5.3-1 .4-1.5.6Z"
+                fill="#5C6870"
+              />
+            </svg>
+            <span class="visually-hidden">Субтитры</span>
+          </button>
 
-            <button class="controls__button button" type="button">
-              <svg
-                class="controls__image"
-                aria-hidden="true"
-                focusable="false"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 0v6h3V3h3V0H0ZM3 14H0v6h6v-3H3v-3ZM17 0h-3v3h3v3h3V0h-3ZM17 17h-3v3h6v-6h-3v3Z"
-                  fill="#5C6870"
-                />
-              </svg>
-              <span class="visually-hidden">Режим экрана</span>
-            </button>
-          </div>
-        </section>
+          <button class="controls__button" type="button">
+            <svg
+              class="controls__image"
+              aria-hidden="true"
+              focusable="false"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0v6h3V3h3V0H0ZM3 14H0v6h6v-3H3v-3ZM17 0h-3v3h3v3h3V0h-3ZM17 17h-3v3h6v-6h-3v3Z"
+                fill="#5C6870"
+              />
+            </svg>
+            <span class="visually-hidden">Режим экрана</span>
+          </button>
+        </div>
       </section>
     </main>
     <!-- Footer  -->
     <footer class="page-footer">
-      <!-- <div class="page-footer__wrapper"> -->
-      <div class="page-footer__social social">
-        <h2 class="visually-hidden">Контакты</h2>
-        <a class="social__link social__link--hashtag" href="#">#visitSEDONA</a>
-        <ul class="page-footer__social social-list">
-          <li class="social__item">
-            <a
-              class="social__link social__link--twitter"
-              href="http://twitter.com/htmlacademy_ru"
-              >Мы в Твиттере</a
-            >
-          </li>
-          <li class="social__item">
-            <a
-              class="social__link social__link--facebook"
-              href="http://facebook.com/htmlacademy"
-              >Мы в Фейсбуке</a
-            >
-          </li>
-          <li class="social__item">
-            <a
-              class="social__link social__link--youtube"
-              href="http://youtube.com/user/htmlacademyru"
-              >Мы на Ютубе</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copiright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/">
+      <h2 class="visually-hidden">Контакты</h2>
+      <a class="page-footer__hashtag" href="#">#visitSEDONA</a>
+      <ul class="page-footer__social">
+        <li class="page-footer__social-item">
+          <a
+            class="page-footer__social-link"
+            href="http://twitter.com/htmlacademy_ru"
+            >Мы в Твиттере</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="page-footer__social-link"
+            href="http://facebook.com/htmlacademy"
+            >Мы в Фейсбуке</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="page-footer__social-link"
+            href="http://youtube.com/user/htmlacademyru"
+            >Мы на Ютубе</a
+          >
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <span class="page-footer__copyright-text">Разработано: </span>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
           <svg
-            class="copyright__htmlacademy-icon"
             aria-hidden="true"
             focusable="false"
             width="27"
@@ -222,7 +303,6 @@
             /></svg
         ></a>
       </div>
-      <!-- </div> -->
     </footer>
   </body>
 </html>

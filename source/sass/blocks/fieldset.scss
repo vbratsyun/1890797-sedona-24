@@ -1,0 +1,99 @@
+.fieldset__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  // text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 19px;
+
+  &-contacts {
+    padding-bottom: 17px;
+  }
+}
+
+.fieldset__container {
+  margin-bottom: 20px;
+
+  &-personality {
+    display: flex;
+    align-items: center;
+  }
+
+  &-personality:last-child {
+    margin-bottom: 25px;
+  }
+
+  &-phone {
+    margin-bottom: 14px;
+  }
+
+  &-email {
+    margin-bottom: 28px;
+  }
+}
+
+.fieldset__container-label {
+  display: block;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin-right: 13px;
+
+  &-contacts {
+    margin-bottom: 8px;
+  }
+}
+
+.fieldset__container-input {
+  @include input();
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+  background: #f2f2f2;
+  width: 100%;
+  padding: 18px 0 14px 22px;
+}
+
+.fieldset__list {
+  @include list();
+}
+
+.fieldset__item-radio {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 31px;
+  }
+}
+
+.fieldset__item-checkbox {
+  margin-bottom: 34px;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.fieldset__control-label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+}
+
+.fieldset__textarea {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+  background: #f2f2f2;
+  width: 100%;
+  padding: 13px 0 29px 21px;
+  border: none;
+  margin: 0;
+}

@@ -1,1 +1,28 @@
-// Начните писать стили здесь
+// Начните писать стили ;
+// Global
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/visually-hidden.scss";
+@import "global/img.scss";
+
+// Blocks
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-nav.scss";
+@import "blocks/page-main.scss";
+@import "blocks/intro.scss";
+@import "blocks/promo.scss";
+@import "blocks/advantage.scss";
+@import "blocks/search.scss";
+@import "blocks/page-footer.scss";
+
+// Form
+@import "blocks/page-form.scss";
+@import "blocks/form-container.scss";
+@import "blocks/form.scss";
+@import "blocks/fieldset.scss";
+
+// Catalog
+@import "blocks/page-catalog.scss";
+@import "blocks/photo-gallery.scss";
+@import "blocks/presentation.scss";

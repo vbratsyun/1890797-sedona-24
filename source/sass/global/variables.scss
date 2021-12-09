@@ -1,0 +1,48 @@
+// Colors
+$white: #ffffff;
+$lightblack: #333333;
+$black: #000000;
+$blue-gray: #81b3d2;
+$gray: #eeeeee;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 320px;
+
+@mixin list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link {
+  text-decoration: none;
+}
+
+@mixin fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+@mixin input {
+  border: none;
+  margin: 0;
+}
+
+@mixin button {
+  display: block;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: $blue-gray;
+}

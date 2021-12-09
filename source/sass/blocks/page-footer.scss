@@ -1,0 +1,44 @@
+.page-footer__hashtag {
+  @include link();
+
+  display: block;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  // text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  margin-top: 29px;
+  margin-bottom: 34px;
+}
+
+.page-footer__social {
+  @include list();
+
+  &-link {
+    @include link();
+  }
+
+  margin-bottom: 40px;
+  // text-align: center;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  margin-bottom: 23px;
+
+  &-text {
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+    min-width: 121px;
+    text-align: center;
+  }
+
+  &-link {
+    @include link();
+  }
+}
