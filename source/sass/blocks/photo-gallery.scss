@@ -36,6 +36,7 @@
 .photo-gallery__reaction {
   display: flex;
 }
+
 .photo-gallery__reaction-icon {
   margin-right: 14px;
 }
@@ -46,9 +47,4 @@
   text-transform: uppercase;
   color: $black;
   margin: 0;
-}
-
-.page-catalog__video-gallery {
-  margin-top: 32px;
-  margin-bottom: 76px;
 }
