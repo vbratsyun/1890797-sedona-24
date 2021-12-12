@@ -103,7 +103,7 @@
   }
 }
 
-@media (min-width: $mobile-width-only) {
+@media (max-width: $mobile-width-only) {
   .page-nav--closed .page-nav__site-list {
     display: none;
   }
