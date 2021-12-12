@@ -5,11 +5,38 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  // text-align: center;
   text-transform: uppercase;
   color: $black;
   margin-top: 29px;
   margin-bottom: 34px;
+}
+
+.page-footer__wrapper {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .page-footer__hashtag {
+      margin: 0;
+    }
+
+    .page-footer__social {
+      margin: 0;
+    }
+
+    .page-footer__copyright {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1120px;
+    margin: 0 auto;
+  }
 }
 
 .page-footer__social {
@@ -20,13 +47,12 @@
   }
 
   margin-bottom: 40px;
-  // text-align: center;
 }
 
 .page-footer__copyright {
   display: flex;
   align-items: center;
-  // justify-content: center;
+  justify-content: center;
   margin-bottom: 23px;
 
   &-text {
