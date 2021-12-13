@@ -29,8 +29,6 @@
   margin: 0 auto;
 
   @media (min-width: $desktop-width) {
-    height: 97px;
-
     &::before {
       content: "";
       background: url("../../img/htmlacademy-logo-background.svg") no-repeat
