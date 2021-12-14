@@ -1,7 +1,3 @@
-.advantage {
-  margin-bottom: 33px;
-}
-
 .advantage__list {
   @include list();
 }
@@ -24,11 +20,49 @@
   &--city {
     padding-bottom: 0;
     text-align: left;
+    padding-left: 69px;
+    padding-right: 20px;
+    position: relative;
   }
 
   &--gray-theme {
     background-color: $gray;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
+
+.advantage__item--icon-house::before {
+  content: "";
+  width: 39px;
+  height: 37px;
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  margin: 0 auto;
+  background: url("../../img/index/advantage/icon-house.svg") no-repeat;
+}
+
+.advantage__item--icon-gift::before {
+  content: "";
+  width: 39px;
+  height: 38px;
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  margin: 0 auto;
+  background: url("../../img/index/advantage/icon-gift.svg") no-repeat;
+}
+
+.advantage__item--icon-burger::before {
+  content: "";
+  width: 39px;
+  height: 37px;
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  margin: 0 auto;
+  background: url("../../img/index/advantage/icon-burger.svg") no-repeat;
 }
 
 .advantage__item-container {
@@ -45,9 +79,32 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $black;
+  position: relative;
 
   &--light {
     color: $white;
+  }
+
+  &--road::before {
+    content: "";
+    height: 1px;
+    background-color: #d6d6d6;
+    width: 100%;
+    left: 0;
+    top: -26px;
+    position: absolute;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--road::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--road::before {
+      display: none;
+    }
   }
 }
 
@@ -57,12 +114,195 @@
   padding: 0;
   font: inherit;
   text-transform: uppercase;
+  position: relative;
 
   &--light {
     color: $white;
   }
 }
 
+@media (min-width: $mobile-width-only) {
+  .br-tablet,
+  .br-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .br-tablet {
+    display: block;
+  }
+
+  .br-mobil,
+  .br-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .br-desktop {
+    display: block;
+  }
+
+  .br-mobil,
+  .br-tablet {
+    display: none;
+  }
+}
+
+.advantage__description {
+  &--road::after {
+    content: "";
+    height: 1px;
+    background-color: #d6d6d6;
+    width: 100%;
+    bottom: -25px;
+    left: 0;
+    position: absolute;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--road::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--road::after {
+      display: none;
+    }
+  }
+}
+
 .advantage__number {
   margin-bottom: 14px;
+}
+
+.advantage__image {
+  height: 100%;
+}
+
+.advantage__wrapper {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+
+    .advantage__list {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+    }
+
+    .advantage__item--real-city {
+      order: 1;
+    }
+
+    .advantage__item--residence {
+      order: 2;
+    }
+
+    .advantage__item--gift {
+      order: 4;
+    }
+
+    .advantage__item--food {
+      order: 3;
+    }
+
+    .advantage__item--devil-bridge {
+      order: 5;
+    }
+
+    .advantage__item--square {
+      order: 6;
+    }
+
+    .advantage__item--road {
+      order: 7;
+    }
+
+    .advantage__item--tourists {
+      order: 8;
+    }
+
+    .advantage__item--first {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-column: 1/-1;
+    }
+
+    .advantage__item--city {
+      padding: 158px 0 59px 0;
+      text-align: center;
+    }
+
+    .advantage__item--icon-house::before {
+      content: "";
+      background: url("../../img/index/advantage/icon-house-tablet.svg")
+        no-repeat;
+      width: 75px;
+      height: 72px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+
+    .advantage__item--icon-gift::before {
+      content: "";
+      background: url("../../img/index/advantage/icon-gift-tablet.svg")
+        no-repeat;
+      width: 64px;
+      height: 75px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+
+    .advantage__item--icon-burger::before {
+      content: "";
+      background: url("../../img/index/advantage/icon-burger-tablet.svg")
+        no-repeat;
+      width: 76px;
+      height: 68px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+
+    .advantage__item--second {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-column: 1/-1;
+      padding-top: 0;
+
+      .advantage__item-container {
+        order: 2;
+      }
+    }
+
+    .advantage__item--gray-theme {
+      padding: 42px 0 63px 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantage__list {
+    .advantage__item {
+      &--city {
+        padding: 158px 0 80px 0;
+      }
+    }
+  }
 }

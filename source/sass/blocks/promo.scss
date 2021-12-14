@@ -1,6 +1,18 @@
-.promo {
-  // text-align: center;
-  margin-bottom: 11px;
+.promo__wrapper {
+  text-align: center;
+  margin: 0 20px 11px 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 520px;
+    margin: 0 auto;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 484px;
+    margin: 0 auto;
+    margin-bottom: 41px;
+  }
 }
 
 .promo__description {

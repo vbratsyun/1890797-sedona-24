@@ -1,8 +1,47 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
-// .page-header__logo {
-//   margin: 0 auto;
-// }
+.page-header__nav {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+}
+
+.page-header__logo {
+  height: 84px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      background: url("../../img/htmlacademy-logo-background.svg") no-repeat
+        center;
+      width: 189px;
+      height: 97px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      z-index: -1;
+    }
+  }
+}

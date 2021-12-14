@@ -12,4 +12,8 @@
   margin: 0;
   background-color: $white;
   color: $lightblack;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
 }
