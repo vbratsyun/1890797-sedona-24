@@ -1,0 +1,48 @@
+.controls {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.controls__button {
+  @include button;
+
+  background-color: transparent;
+  padding: 0;
+
+  &--play {
+    margin-left: 8%;
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    margin-right: 12%;
+  }
+
+  &--screen {
+    margin-right: 7%;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--play {
+      margin-left: 5%;
+      margin-right: 0;
+    }
+
+    &--subtitles {
+      margin-left: 75%;
+      margin-right: 0;
+    }
+
+    &--screen {
+      margin-left: 5%;
+      margin-right: 0;
+    }
+  }
+}
+
+.controls__image {
+  @media (min-width: $tablet-width) {
+    fill: $white;
+  }
+}

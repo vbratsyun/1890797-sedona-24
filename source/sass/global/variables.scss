@@ -4,11 +4,14 @@ $lightblack: #333333;
 $black: #000000;
 $blue-gray: #81b3d2;
 $gray: #eeeeee;
+$border: #e5e5e5;
+$box-icon: #e5e5e5;
+$lightgray: #f2f2f2;
 
 // Viewports
 
 $tablet-width: 768px;
-$desktop-width: 1200px;
+$desktop-width: 1280px;
 $mobile-width-only: 320px;
 
 @mixin list {

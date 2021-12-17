@@ -121,35 +121,6 @@
   }
 }
 
-@media (min-width: $mobile-width-only) {
-  .br-tablet,
-  .br-desktop {
-    display: none;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .br-tablet {
-    display: block;
-  }
-
-  .br-mobil,
-  .br-desktop {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .br-desktop {
-    display: block;
-  }
-
-  .br-mobil,
-  .br-tablet {
-    display: none;
-  }
-}
-
 .advantage__description {
   &--road::after {
     content: "";
@@ -296,13 +267,8 @@
     }
   }
 }
-
 @media (min-width: $desktop-width) {
-  .advantage__list {
-    .advantage__item {
-      &--city {
-        padding: 158px 0 80px 0;
-      }
-    }
+  .advantage__list .advantage__item--city {
+    padding: 158px 0 80px 0;
   }
 }
