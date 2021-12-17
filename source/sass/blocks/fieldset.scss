@@ -327,8 +327,7 @@
   }
 }
 
-.fieldset__control-radio[type="radio"]:checked
-  + .fieldset__control-mark--radio::before {
+.fieldset__control-radio[type="radio"]:checked + .fieldset__control-mark--radio::before {
   display: block;
 }
 
