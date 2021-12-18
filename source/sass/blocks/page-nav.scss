@@ -117,13 +117,14 @@
   .page-nav__wrapper {
     display: flex;
     border: none;
+  }
 
-    .page-nav__site-list-link {
-      border: none;
+  .page-nav__site-list-link {
+    border: none;
+    color: $black;
 
-      &--academy {
-        background: none;
-      }
+    &--academy {
+      background: none;
     }
   }
 
@@ -145,10 +146,6 @@
   .page-nav__site-list-item--form {
     flex-grow: 1;
     margin-left: 70px;
-  }
-
-  .page-nav__site-list-link {
-    color: $black;
   }
 
   .page-nav__toggle {

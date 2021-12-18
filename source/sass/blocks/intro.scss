@@ -9,6 +9,30 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 55px;
   }
+
+  &--page-catalog {
+    margin-bottom: 31px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 58px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 96px;
+    }
+  }
+
+  &--page-form {
+    margin-bottom: 36px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 63px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 113px;
+    }
+  }
 }
 
 .intro__image {
@@ -25,9 +49,9 @@
     max-height: 518px;
     width: 100%;
   }
+
+  &--page-catalog {
+    min-height: 214px;
+    width: 100%;
+  }
 }
-// .intro__container {
-//   background: url("../../img/index/intro.png") no-repeat top center;
-//   background-size: cover;
-//   min-height: 389px;
-// }

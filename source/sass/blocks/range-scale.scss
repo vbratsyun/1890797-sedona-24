@@ -1,0 +1,49 @@
+.range-scale {
+  width: 87%;
+  background-color: $black;
+  opacity: 0.6;
+  height: 45px;
+
+  @media (min-width: $tablet-width) {
+    width: 84%;
+    height: 93px;
+  }
+}
+
+.range-scale__range-bar {
+  position: absolute;
+  width: 84%;
+  height: 3px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  background-color: rgba($color: $white, $alpha: 0.2);
+
+  @media (min-width: $tablet-width) {
+    width: 60%;
+    left: -8%;
+  }
+}
+
+.range-scale__toggle {
+  @include button;
+
+  position: absolute;
+  top: -4px;
+  left: 14%;
+  width: 10px;
+  height: 10px;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  box-sizing: border-box;
+  opacity: 1;
+
+  @media (min-width: $tablet-width) {
+    left: 29%;
+  }
+}

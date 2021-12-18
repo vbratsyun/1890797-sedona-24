@@ -1,3 +1,19 @@
-.page-form__promo {
-  margin-bottom: 16px;
+.page-form {
+  flex-grow: 1;
+  position: relative;
+  top: -28px;
+}
+
+.page-form__form {
+  margin-bottom: 48px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px;
+    margin-bottom: 66px;
+  }
 }
