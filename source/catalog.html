@@ -4,18 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- 32×32 -->
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
       <a class="page-header__logo">
-        <img
-          src="img/logotype-mobile.svg"
-          width="102"
-          height="84"
-          alt="Логотип сайта Седона."
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="img/logotype-desktop.svg"
+            width="187"
+            height="97"
+          />
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg" />
+          <img
+            src="img/logotype-mobile.svg"
+            width="102"
+            height="84"
+            alt="Логотип сайта Седона."
+          />
+        </picture>
       </a>
       <nav class="page-header__nav page-nav page-nav--closed">
         <button class="page-nav__toggle" type="button">
@@ -26,7 +42,10 @@
             <a class="page-nav__site-list-link" href="index.html">Главная</a>
           </li>
           <li class="page-nav__site-list-item page-nav__site-list-item--photo">
-            <a class="page-nav__site-list-link">Фото и видео</a>
+            <a
+              class="page-nav__site-list-link page-nav__site-list-link--current"
+              >Фото и видео</a
+            >
           </li>
           <li class="page-nav__site-list-item page-nav__site-list-item--form">
             <a class="page-nav__site-list-link" href="form.html"
@@ -53,13 +72,6 @@
           <h2 class="visually-hidden">
             Добро пожаловать в фото- и видеогалерею города Седоны
           </h2>
-          <img
-            class="intro__image--page-catalog"
-            src="img/catalog/intro-sedona.png"
-            width="320"
-            height="214"
-            alt="Изображение-приветствие."
-          />
         </div>
       </section>
       <section class="page-catalog__promo promo">
@@ -71,10 +83,8 @@
           <p
             class="promo__sub-description promo__sub-description--page-catalog"
           >
-            Не можете решиться на путешествие<br class="br br--mobile" />
-            из-за курса?
-            <br class="br br--tablet" /><br class="br br--desktop" />
-            Фотографии помогут вам забыть о политике и экономике.
+            Не можете решиться на путешествие из-за курса? Фотографии помогут
+            вам забыть о политике и экономике.
           </p>
         </div>
       </section>
@@ -84,13 +94,31 @@
         </h2>
         <ul class="photo-gallery__list">
           <li class="photo-gallery__item photo-gallery__item--spaces">
-            <img
-              class="photo-gallery__image"
-              src="img/gallery/spaces.jpg"
-              width="280"
-              height="280"
-              alt=""
-            />
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="
+                  img/catalog/spaces-desktop.jpg    1x,
+                  img/catalog/spaces-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/catalog/spaces-tablet.jpg    1x,
+                  img/catalog/spaces-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                class="photo-gallery__image"
+                src="img/catalog/spaces-mobile.jpg"
+                srcset="img/catalog/spaces-mobile@2x.jpg 2x"
+                width="280"
+                height="280"
+                alt=""
+              />
+            </picture>
+
             <div
               class="photo-gallery__feedback photo-gallery__feedback--spaces"
             >
@@ -118,13 +146,30 @@
             </div>
           </li>
           <li class="photo-gallery__item">
-            <img
-              class="photo-gallery__image"
-              src="img/gallery/vegetation.jpg"
-              width="280"
-              height="280"
-              alt=""
-            />
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="
+                  img/catalog/vegetation-desktop.jpg    1x,
+                  img/catalog/vegetation-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/catalog/vegetation-tablet.jpg    1x,
+                  img/catalog/vegetation-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                class="photo-gallery__image"
+                src="img/catalog/vegetation-mobile.jpg"
+                srcset="img/catalog/vegetation-mobile@2x.jpg"
+                width="280"
+                height="280"
+                alt=""
+              />
+            </picture>
             <div
               class="
                 photo-gallery__feedback photo-gallery__feedback--vegetation
@@ -154,13 +199,30 @@
             </div>
           </li>
           <li class="photo-gallery__item">
-            <img
-              class="photo-gallery__image"
-              src="img/gallery/road-to-the-north.jpg"
-              width="280"
-              height="280"
-              alt=""
-            />
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="
+                  img/catalog//road-to-the-north-desktop.jpg    1x,
+                  img/catalog//road-to-the-north-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/catalog//road-to-the-north-tablet.jpg    1x,
+                  img/catalog//road-to-the-north-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                class="photo-gallery__image"
+                src="img/catalog/road-to-the-north-mobile.jpg"
+                srcset="img/catalog/road-to-the-north-mobile@2x.jpg"
+                width="280"
+                height="280"
+                alt=""
+              />
+            </picture>
             <div class="photo-gallery__feedback photo-gallery__feedback--road">
               <div class="photo-gallery__figcaption">
                 <h3 class="photo-gallery__title">Дорога на север</h3>
@@ -186,13 +248,30 @@
             </div>
           </li>
           <li class="photo-gallery__item photo-gallery__item--devil-bridge">
-            <img
-              class="photo-gallery__image"
-              src="img/gallery/devil's-bridge.jpg"
-              width="280"
-              height="280"
-              alt=""
-            />
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="
+                  img/catalog/devil-bridge-desktop.jpg    1x,
+                  img/catalog/devil-bridge-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/catalog/devil-bridge-tablet.jpg    1x,
+                  img/catalog/devil-bridge-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                class="photo-gallery__image"
+                src="img/catalog/devil-bridge-mobile.jpg"
+                srcset="img/catalog/devil-bridge-mobile@2x.jpg"
+                width="280"
+                height="280"
+                alt=""
+              />
+            </picture>
             <div
               class="
                 photo-gallery__feedback photo-gallery__feedback--devil-bridge
@@ -229,9 +308,8 @@
             Все еще сомневаетесь?
           </h2>
           <p class="promo__sub-description">
-            Смотрите видеопрезентацию и скорее за билетами, пока они
-            <br class="br br--tablet" /><br class="br br--desktop" />
-            не подорожали в очередной раз!
+            Смотрите видеопрезентацию и скорее за билетами, пока они не
+            подорожали в очередной раз!
           </p>
         </div>
       </section>

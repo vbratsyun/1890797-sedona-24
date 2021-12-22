@@ -228,6 +228,19 @@
   width: 100%;
 
   @include button();
+
+  &:hover {
+    background: #669ec0;
+  }
+
+  &:active {
+    background: #5496bd;
+    color: rgba($color: $white, $alpha: 0.3);
+  }
+
+  // &--disabled {
+  //   background: $border;
+  // }
 }
 
 .form__required-fields {

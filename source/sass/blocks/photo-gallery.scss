@@ -20,7 +20,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 60px;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -75,8 +75,14 @@
 
 .photo-gallery__image {
   margin-bottom: 11px;
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
 }
@@ -85,6 +91,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     padding: 22px 20px 15px;
+    box-sizing: border-box;
 
     &--spaces,
     &--vegetation {
@@ -98,6 +105,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+
     &--spaces,
     &--vegetation {
       background: rgba($color: $black, $alpha: 0.3);

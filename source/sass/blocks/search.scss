@@ -59,6 +59,15 @@
 
   @include button();
 
+  &:hover {
+    background: #669ec0;
+  }
+
+  &:active {
+    background: #5496bd;
+    color: rgba($color: $white, $alpha: 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     max-width: 458px;
     margin-bottom: 58px;
