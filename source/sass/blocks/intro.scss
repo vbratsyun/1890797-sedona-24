@@ -1,71 +1,122 @@
+.intro {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 0.4em 5px rgb(122 122 122 / 50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    box-shadow: none;
+  }
+
+  &--page-form {
+    box-shadow: none;
+  }
+}
+
 .intro__wrapper {
   margin-bottom: 32px;
   display: grid;
   height: 389px;
-  background: url("../../img/index/intro-mobile.png") no-repeat center;
+  background-color: $box-icon;
+  background-image: url("../../img/index/intro-triangle.svg"),
+    url("../../img/index/back-mobile.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/index/intro-mobile@2x.png") no-repeat center;
+    background-image: url("../../img/index/intro-triangle.svg"),
+      url("../../img/index/back-mobile@2x.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 44px;
     height: 518px;
-    background: url("../../img/index/intro-tablet.png") no-repeat center;
-    background-size: cover;
+    background-image: url("../../img/index/intro-triangle-desktop.svg"),
+      url("../../img/index/back-tablet.jpg");
+    background-size: 1200px 57px, cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/index/intro-tablet@2x.png") no-repeat center;
-      background-size: cover;
+      background: url("../../img/index/intro-triangle-desktop.svg"),
+        url("../../img/index/back-tablet@2x.jpg");
+      background-size: 1200px 57px, cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
     }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 55px;
-    height: 518px;
-    background: url("../../img/index/intro-desktop.png") no-repeat center;
-    background-size: cover;
+    background-image: url("../../img/index/intro-triangle-desktop.svg"),
+      url("../../img/index/back-desktop.jpg");
+    background-size: 1200px 57px, cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/index/intro-desktop.png") no-repeat center;
-      background-size: cover;
+      background: url("../../img/index/intro-triangle-desktop.svg"),
+        url("../../img/index/back-desktop@2x.jpg");
+      background-size: 1200px 57px, cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
     }
   }
 
-  &--page-catalog {
+  &--page-catalog,
+  &--page-form {
     margin-bottom: 31px;
     height: 158px;
-    background: url("../../img/catalog/intro-catalog-mobile.png") no-repeat
-      center -57px;
+    background-image: url("../../img/catalog/intro-triangle.svg"),
+      url("../../img/catalog/back-mobile.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/catalog/intro-catalog-mobile@2x.png");
+      background-image: url("../../img/catalog/intro-triangle.svg"),
+        url("../../img/catalog/back-mobile@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
     }
 
     @media (min-width: $tablet-width) {
       margin-bottom: 58px;
       height: 295px;
-      background: url("../../img/catalog/intro-catalog-tablet.png") no-repeat
-        center -57px;
-      background-size: cover;
+      background-image: url("../../img/catalog/intro-triangle.svg"),
+        url("../../img/catalog/back-tablet.jpg");
+      background-size: 1200px 57px, cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/catalog/intro-catalog-tablet@2x.png");
+        background-image: url("../../img/catalog/intro-triangle.svg"),
+          url("../../img/catalog/back-tablet@2x.jpg");
+        background-size: 1200px 57px, cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
       }
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 96px;
       height: 301px;
-      background: url("../../img/catalog/intro-catalog-desktop.png") no-repeat
-        center -69px;
-      background-size: cover;
+      background-image: url("../../img/catalog/intro-triangle.svg"),
+        url("../../img/catalog/back-desktop.jpg");
+      background-size: 1200px 57px, cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/catalog/intro-catalog-desktop@2x.png");
+        background-image: url("../../img/catalog/intro-triangle.svg"),
+          url("../../img/catalog/back-desktop@2x.jpg");
+        background-size: 1200px 57px, cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
       }
     }
   }
@@ -73,41 +124,39 @@
   &--page-form {
     margin-bottom: 36px;
     height: 158px;
-    background: url("../../img/catalog/intro-catalog-mobile.png") no-repeat
-      center -57px;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/catalog/intro-catalog-mobile@2x.png");
-    }
 
     @media (min-width: $tablet-width) {
       margin-bottom: 63px;
       height: 291px;
-      background: url("../../img/catalog/intro-catalog-desktop.png") no-repeat
-        52% -48px;
-      background-size: 148%;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/catalog/intro-catalog-desktop@2x.png");
-      }
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 113px;
       height: 301px;
-      background: url("../../img/catalog/intro-catalog-desktop.png") no-repeat
-        center -58px;
-      background-size: cover;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/catalog/intro-catalog-desktop@2x.png");
-      }
     }
   }
 }
 
-.intro__image {
-  display: flex;
-  width: 100%;
+// .intro__image {
+//   display: flex;
+//   width: 100%;
+// }
+
+.intro__slogan {
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 461px;
+    margin-top: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 460px;
+  }
+
+  &--page-catalog {
+    @media (min-width: $tablet-width) {
+      margin-top: 100px;
+    }
+  }
 }

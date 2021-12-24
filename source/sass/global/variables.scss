@@ -4,9 +4,12 @@ $lightblack: #333333;
 $black: #000000;
 $blue-gray: #81b3d2;
 $gray: #eeeeee;
-$border: #e5e5e5;
 $box-icon: #e5e5e5;
 $lightgray: #f2f2f2;
+$checkbox: #d5d5d5;
+$line: #dbdbdb;
+$hover: #669ec0;
+$active: #5496bd;
 
 // Viewports
 
@@ -38,7 +41,7 @@ $mobile-width-only: 320px;
 @mixin button {
   display: block;
   border: none;
-  outline: none;
+  // outline: none;
   box-sizing: border-box;
   font-family: inherit;
   font-weight: 700;

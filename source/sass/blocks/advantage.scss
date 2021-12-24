@@ -98,7 +98,7 @@
   &--road::before {
     content: "";
     height: 1px;
-    background-color: #d6d6d6;
+    background-color: $line;
     width: 100%;
     left: 0;
     top: -26px;
@@ -147,7 +147,7 @@
   &--road::after {
     content: "";
     height: 1px;
-    background-color: #d6d6d6;
+    background-color: $line;
     width: 100%;
     bottom: -25px;
     left: 0;

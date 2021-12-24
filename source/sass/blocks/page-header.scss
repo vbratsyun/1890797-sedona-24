@@ -14,7 +14,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1280px;
     position: relative;
     z-index: 1;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: $desktop-width) {
+    min-width: 187px;
   }
 }

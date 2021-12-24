@@ -115,12 +115,12 @@
     grid-template-columns: auto 58px;
 
     &:hover {
-      background: $border;
+      background: $box-icon;
     }
 
     &:active {
       background: transparent;
-      outline: 4px solid $border;
+      outline: 4px solid $box-icon;
     }
   }
 
@@ -175,12 +175,12 @@
   }
 
   &:hover {
-    background: $border;
+    background: $box-icon;
   }
 
   &:active {
     background: transparent;
-    outline: 4px solid $border;
+    outline: 4px solid $box-icon;
   }
 }
 
@@ -345,24 +345,25 @@
   }
 
   &:hover {
-    background: $border;
+    background: $box-icon;
   }
 
   &:hover::before {
-    background: #333333;
+    background: $lightblack;
   }
 
   &:active {
-    background: #d5d5d5;
+    background: $checkbox;
   }
 
   &:active::before {
-    background: #333333;
+    background: $lightblack;
     opacity: 0.3;
   }
 }
 
-.fieldset__control-radio[type="radio"]:checked + .fieldset__control-mark--radio::before {
+.fieldset__control-radio[type="radio"]:checked
+  + .fieldset__control-mark--radio::before {
   display: block;
 }
 
@@ -379,18 +380,18 @@
 }
 
 .fieldset__control:hover .fieldset__control-checkbox {
-  background: $border;
+  background: $box-icon;
 }
 
 .fieldset__control:hover .fieldset__image {
-  fill: #333333;
+  fill: $lightblack;
 }
 
 .fieldset__control:active .fieldset__control-checkbox {
-  background: #d5d5d5;
+  background: $checkbox;
 }
 
 .fieldset__control:active .fieldset__image {
-  fill: #333333;
+  fill: $lightblack;
   opacity: 0.3;
 }

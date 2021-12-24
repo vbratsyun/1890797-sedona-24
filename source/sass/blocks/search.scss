@@ -60,11 +60,11 @@
   @include button();
 
   &:hover {
-    background: #669ec0;
+    background: $hover;
   }
 
   &:active {
-    background: #5496bd;
+    background: $active;
     color: rgba($color: $white, $alpha: 0.3);
   }
 
