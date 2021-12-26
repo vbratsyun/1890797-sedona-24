@@ -59,6 +59,19 @@
 
   @include button();
 
+  &:hover {
+    background: $hover;
+  }
+
+  &:active {
+    background: $active;
+    color: rgba($color: $white, $alpha: 0.3);
+  }
+
+  &:disabled {
+    background-color: $box-icon;
+  }
+
   @media (min-width: $tablet-width) {
     max-width: 458px;
     margin-bottom: 58px;

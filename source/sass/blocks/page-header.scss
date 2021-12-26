@@ -2,46 +2,26 @@
   display: flex;
   flex-direction: column;
   z-index: 2;
-}
-
-.page-header__nav {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -2;
-  }
+  max-height: 87px;
 }
 
 .page-header__logo {
-  height: 84px;
   margin: 0 auto;
 
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 1;
+  }
+
   @media (min-width: $desktop-width) {
-    &::before {
-      content: "";
-      background: url("../../img/htmlacademy-logo-background.svg") no-repeat
-        center;
-      width: 189px;
-      height: 97px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0 auto;
-      z-index: -1;
-    }
+    max-width: 1280px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: $desktop-width) {
+    min-width: 187px;
   }
 }

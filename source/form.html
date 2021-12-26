@@ -4,18 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- 32×32 -->
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
       <a class="page-header__logo">
-        <img
-          src="img/logotype-mobile.svg"
-          width="102"
-          height="84"
-          alt="Логотип сайта Седона."
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="img/logotype-desktop.svg"
+            width="187"
+            height="97"
+          />
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg" />
+          <img
+          class="page-header__logo"
+            src="img/logotype-mobile.svg"
+            width="102"
+            height="84"
+            alt="Логотип сайта Седона."
+          />
+        </picture>
       </a>
       <nav class="page-header__nav page-nav page-nav--closed page-nav--nojs">
         <button class="page-nav__toggle" type="button">
@@ -23,7 +39,7 @@
         </button>
         <ul class="page-nav__site-list page-nav__wrapper">
           <li class="page-nav__site-list-item site-list-item--current">
-            <a class="page-nav__site-list-link">Главная</a>
+            <a class="page-nav__site-list-link" href="index.html"">Главная</a>
           </li>
           <li class="page-nav__site-list-item page-nav__site-list-item--photo">
             <a class="page-nav__site-list-link" href="catalog.html"
@@ -31,7 +47,7 @@
             >
           </li>
           <li class="page-nav__site-list-item page-nav__site-list-item--form">
-            <a class="page-nav__site-list-link" href="form.html"
+            <a class="page-nav__site-list-link page-nav__site-list-link--current" href="form.html"
               >Форма Отзыва</a
             >
           </li>
@@ -50,17 +66,17 @@
     <!-- Form  -->
     <main class="page-form">
       <h1 class="visually-hidden">Впечатления от посещения города Седоны</h1>
-      <section class="intro">
+      <section class="intro intro--page-form">
         <div class="intro__wrapper intro__wrapper--page-form">
           <h2 class="visually-hidden">
             Форма для заполнения о посещенном городе Седона
           </h2>
           <img
-            class="intro__image--page-catalog"
-            src="img/catalog/intro-sedona.png"
-            width="320"
-            height="214"
-            alt="Изображение-приветствие."
+            class="intro__slogan intro__slogan--page-catalog"
+            src="img/catalog/sedona.svg"
+            width="229"
+            height="39"
+            alt="Приветствие."
           />
         </div>
       </section>
@@ -71,9 +87,8 @@
             Оставьте свой отзыв
           </p>
           <p class="promo__sub-description promo__sub-description--page-form">
-            Помогите нашим отелям стать лучше! Оставьте отзыв о них,
-            <br class="br br--tablet" /><br class="br br--desktop" />
-            а также о посещенных вами достопримечательностях
+            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
+            посещенных вами достопримечательностях
           </p>
         </div>
       </section>
@@ -267,10 +282,7 @@
           <div class="form__wrapper form__wrapper--sight">
             <fieldset class="form__fieldset fieldset form__fieldset--singht">
               <legend class="fieldset__title fieldset__title--sight">
-                Посещенные <br class="br br--tablet" /><br
-                  class="br br--desktop"
-                />
-                достопримечательности:
+                Посещенные достопримечательности:
               </legend>
               <ul class="fieldset__list fieldset__list--checkbox">
                 <li class="fieldset__item-checkbox">
@@ -288,12 +300,11 @@
                       width="24"
                       height="17"
                       viewBox="0 0 24 17"
-                      fill="none"
+                      fill="000"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="m22.925 1.325-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z"
-                        fill="#000"
                       />
                     </svg>
                     <span
@@ -319,12 +330,11 @@
                       width="24"
                       height="17"
                       viewBox="0 0 24 17"
-                      fill="none"
+                      fill="000"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="m22.925 1.325-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z"
-                        fill="#000"
                       />
                     </svg>
 
@@ -353,12 +363,11 @@
                       width="24"
                       height="17"
                       viewBox="0 0 24 17"
-                      fill="none"
+                      fill="000"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="m22.925 1.325-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z"
-                        fill="#000"
                       />
                     </svg>
                     <span
@@ -387,12 +396,11 @@
                       width="24"
                       height="17"
                       viewBox="0 0 24 17"
-                      fill="none"
+                      fill="000"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="m22.925 1.325-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z"
-                        fill="#000"
                       />
                     </svg>
                     <span
@@ -420,7 +428,7 @@
               ></textarea>
             </fieldset>
             <div class="form__button-wrapper">
-              <button class="form__button button" type="submit">
+              <button class="form__button button form__button--disabled" type="submit">
                 Отправить отзыв
               </button>
               <p class="form__required-fields">* — обязательные поля</p>

@@ -4,26 +4,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- 32×32 -->
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
       <a class="page-header__logo">
-        <img
-          src="img/logotype-mobile.svg"
-          width="102"
-          height="84"
-          alt="Логотип сайта Седона."
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="img/logotype-desktop.svg"
+          />
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg" />
+          <img
+            class="page-header__logo-image"
+            src="img/logotype-mobile.svg"
+            width="102"
+            height="84"
+            alt="Логотип сайта Седона."
+          />
+        </picture>
       </a>
       <nav class="page-header__nav page-nav page-nav--closed page-nav--nojs">
         <button class="page-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="page-nav__site-list page-nav__wrapper">
-          <li class="page-nav__site-list-item site-list-item--current">
-            <a class="page-nav__site-list-link">Главная</a>
+          <li class="page-nav__site-list-item">
+            <a
+              class="page-nav__site-list-link page-nav__site-list-link--current"
+              >Главная</a
+            >
           </li>
           <li class="page-nav__site-list-item page-nav__site-list-item--photo">
             <a class="page-nav__site-list-link" href="catalog.html"
@@ -35,8 +53,14 @@
               >Форма Отзыва</a
             >
           </li>
-          <li class="page-nav__site-list-item page-nav__site-list-item--academy">
-            <a class="page-nav__site-list-link page-nav__site-list-link--academy" href="#">HTML ACADEMY</a>
+          <li
+            class="page-nav__site-list-item page-nav__site-list-item--academy"
+          >
+            <a
+              class="page-nav__site-list-link page-nav__site-list-link--academy"
+              href="#"
+              >HTML ACADEMY</a
+            >
           </li>
         </ul>
       </nav>
@@ -47,9 +71,14 @@
       <section class="intro">
         <div class="intro__wrapper">
           <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-          <img class="intro__image" src="img/index/intro.png" width="282"
-          height="214"
-          alt="Изображение-приветствие.">
+          <img
+            class="intro__slogan"
+            src="img/index/text-index.svg"
+            width="282"
+            height="214"
+            alt="Приветствие."
+          />
+        </div>
       </section>
       <section class="promo">
         <div class="promo__wrapper">
@@ -66,85 +95,210 @@
         <div class="advantage__wrapper">
           <h2 class="visually-hidden">Преимущества города Седона</h2>
           <ul class="advantage__list">
-            <li class="advantage__item advantage__item--first advantage__item--real-city">
-              <div class="advantage__item-container advantage__item-container-first">
+            <li
+              class="
+                advantage__item
+                advantage__item--first
+                advantage__item--real-city
+              "
+            >
+              <div
+                class="
+                  advantage__item-container advantage__item-container--city
+                "
+              >
                 <h3 class="advantage__title advantage__title--light">
-                  Настоящий<br class="br br--tablet"><br class="br br--desktop"> городок
+                  Настоящий городок
                 </h3>
                 <p class="advantage__number advantage__number--light">
                   —&nbsp;№1&nbsp;—
                 </p>
                 <p class="advantage__description advantage__description--light">
-                  Седона не аттракцион для туристов,<br class="br br--desktop"> там течёт своя жизнь
+                  Седона не аттракцион для туристов, там течёт своя жизнь
                 </p>
               </div>
-              <img
-                class="advantage__image"
-                src="img/index/advantage/photo-city.jpg"
-                width="520"
-                height="260"
-                alt="Фотография города Седоны."
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    img/index/advantage/photo-city-desktop.jpg     1x,
+                    img/index/advantage//photo-city-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/index/advantage/photo-city-tablet.jpg    1x,
+                    img/index/advantage/photo-city-tablet@2x.jpg 2x
+                  "
+                />
+
+                <img
+                  class="advantage__image"
+                  src="img/index/advantage/photo-city-mobile.jpg"
+                  srcset="img/index/advantage/photo-city-mobile@2x.jpg 2x"
+                  width="520"
+                  height="260"
+                  alt="Фотография города Седоны."
+                />
+              </picture>
             </li>
-            <li class="advantage__item advantage__item--city advantage__item--icon-house advantage__item--residence">
+            <li
+              class="
+                advantage__item
+                advantage__item--city
+                advantage__item--icon-house
+                advantage__item--residence
+              "
+            >
               <h3 class="advantage__title">Жилье</h3>
-              <p class="advantage__description">
-                Рекомендуем пожить в <br class="br br--tablet"> настоящем<br class="br br--desktop"> мотеле, все <br class="br br--tablet"> как в кино!
+              <p
+                class="advantage__description advantage__description--residence"
+              >
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </li>
-            <li class="advantage__item advantage__item--city advantage__item--icon-gift advantage__item--gift">
+            <li
+              class="
+                advantage__item
+                advantage__item--city
+                advantage__item--icon-gift
+                advantage__item--gift
+              "
+            >
               <h3 class="advantage__title">Сувениры</h3>
-              <p class="advantage__description">
-                Не только китайского, <br class="br br--desktop"> но <br class="br br--tablet"> и местного производства!
+              <p class="advantage__description advantage__description--gift">
+                Не только китайского,<br class="br br--desktop" />
+                но и местного производства!
               </p>
             </li>
-            <li class="advantage__item advantage__item--city advantage__item--icon-burger advantage__item--food">
+            <li
+              class="
+                advantage__item
+                advantage__item--city
+                advantage__item--icon-burger
+                advantage__item--food
+              "
+            >
               <h3 class="advantage__title">Еда</h3>
-              <p class="advantage__description">
-                Всегда заказывайте<br class="br br--tablet">
-                фирменный бургер, <br class="br br--tablet"><br class="br br--desktop"> вы не разочаруетесь!
+              <p class="advantage__description advantage__description--food">
+                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
-            <li class="advantage__item advantage__item--second advantage__item--devil-bridge">
-              <div class="advantage__item-container">
-                <h3 class="advantage__title advantage__title--light">
-                  Там есть<br class="br br--tablet"><br class="br br--desktop"> мост дьявола
+            <li
+              class="
+                advantage__item
+                advantage__item--second
+                advantage__item--devil-bridge
+              "
+            >
+              <div
+                class="
+                  advantage__item-container advantage__item-container--bridge
+                "
+              >
+                <h3
+                  class="
+                    advantage__title
+                    advantage__title--light
+                    advantage__title--bridge
+                  "
+                >
+                  Там есть мост дьявола
                 </h3>
                 <p class="advantage__number advantage__number--light">
                   —&nbsp;№2&nbsp;—
                 </p>
-                <p class="advantage__description advantage__description--light">
-                  Да, по нему можно<br class="br br--tablet"> пройти!<br class="br br--desktop"> Если вы<br class="br br--tablet"> осмелитесь, конечно
+                <p
+                  class="
+                    advantage__description
+                    advantage__description--light
+                    advantage__description--bridge
+                  "
+                >
+                  Да, по нему можно пройти! Если вы осмелитесь, конечно
                 </p>
               </div>
-              <img
-                class="advantage__image advantage__image--reverse"
-                src="img/index/advantage/photo-bridge.jpg"
-                width="520"
-                height="260"
-                alt="Фотография моста дьявола."
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px
+                  )"
+                  srcset="
+                    img/index/advantage/photo-bridge-desktop.jpg    1x,
+                    img/index/advantage/photo-bridge-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px
+                  )"
+                  srcset="
+                    img/index/advantage/photo-bridge-tablet.jpg    1x,
+                    img/index/advantage/photo-bridge-tablet@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="advantage__image advantage__image--reverse"
+                  src="img/index/advantage/photo-bridge-mobile.jpg"
+                  srcset="img/index/advantage/photo-bridge-mobile@2x.jpg 2x"
+                  width="520"
+                  height="260"
+                  alt="Фотография моста дьявола."
+                />
+              </picture>
             </li>
-            <li class="advantage__item advantage__item--gray-theme advantage__item--square">
-              <h3 class="advantage__title">Небольшая<br class="br br--tablet"><br class="br br--desktop"> площадь</h3>
+            <li
+              class="
+                advantage__item
+                advantage__item--gray-theme
+                advantage__item--square
+              "
+            >
+              <h3 class="advantage__title advantage__title--gray-theme">
+                Небольшая площадь
+              </h3>
               <p class="advantage__number">—&nbsp;№3&nbsp;—</p>
-              <p class="advantage__description">
-                Вce интересные места <br class="br br--tablet"> находятся очень<br class="br br--desktop"> близко
+              <p class="advantage__description advantage__description--square">
+                Вce интересные места находятся очень близко
               </p>
             </li>
-            <li class="advantage__item advantage__item--gray-theme advantage__item--road">
-              <h3 class="advantage__title advantage__title--road">Красивая<br class="br br--tablet"><br class="br br--desktop"> дорога</h3>
+            <li
+              class="
+                advantage__item
+                advantage__item--gray-theme
+                advantage__item--road
+              "
+            >
+              <h3
+                class="
+                  advantage__title
+                  advantage__title--road
+                  advantage__title--gray-theme
+                "
+              >
+                Красивая дорога
+              </h3>
               <p class="advantage__number">—&nbsp;№4&nbsp;—</p>
               <p class="advantage__description advantage__description--road">
-                Ехать в Седону из <br class="br br--tablet"> Лас-Вегаса<br class="br br--mobile"/>
-                совсем<br class="br br--tablet"><br class="br br--desktop"> не скучно!
+                Ехать в Седону из Лас-Вегаса<br class="br br--mobile" />
+                совсем не скучно!
               </p>
             </li>
-            <li class="advantage__item advantage__item--gray-theme  advantage__item--tourists">
-              <h3 class="advantage__title">Мало<br class="br br--tablet"><br class="br br--desktop"> туристов</h3>
+            <li
+              class="
+                advantage__item
+                advantage__item--gray-theme
+                advantage__item--tourists
+              "
+            >
+              <h3 class="advantage__title advantage__title--gray-theme">
+                Мало туристов
+              </h3>
               <p class="advantage__number">—&nbsp;№5&nbsp;—</p>
-              <p class="advantage__description">
-                Большенство едет в<br class="br br--tablet"> Гранд Каньон<br class="br br--mobile"/> и<br class="br br--tablet"><br class="br br--desktop"> толпится там
+              <p
+                class="advantage__description advantage__description--tourists"
+              >
+                Большенство едет в Гранд Каньон<br class="br br--mobile" />
+                и толпится там
               </p>
             </li>
           </ul>
@@ -154,10 +308,12 @@
         <div class="search__wrapper">
           <h2 class="search__title">Заинтересовались?</h2>
           <p class="search__description">
-            Укажите предполагаемые даты поездки,<br class="br br--tablet"><br class="br br--desktop"> и мы покажем вам лучшие
-            предложения гостиниц в седоне
+            Укажите предполагаемые даты поездки,<br class="br br--tablet" /><br
+              class="br br--desktop"
+            />
+            и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <button class="search__button button" type="button">
+          <button class="search__button button" type="button" disabled>
             Найти гостиницу
           </button>
         </div>
@@ -224,18 +380,18 @@
       </div>
     </footer>
     <script>
-      var navMain = document.querySelector('.page-nav');
-      var navToggle = document.querySelector('.page-nav__toggle');
+      var navMain = document.querySelector(".page-nav");
+      var navToggle = document.querySelector(".page-nav__toggle");
 
-      navMain.classList.remove('page-nav--nojs');
+      navMain.classList.remove("page-nav--nojs");
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('page-nav--closed')) {
-          navMain.classList.remove('page-nav--closed');
-          navMain.classList.add('page-nav--opened');
+      navToggle.addEventListener("click", function () {
+        if (navMain.classList.contains("page-nav--closed")) {
+          navMain.classList.remove("page-nav--closed");
+          navMain.classList.add("page-nav--opened");
         } else {
-          navMain.classList.add('page-nav--closed');
-          navMain.classList.remove('page-nav--opened');
+          navMain.classList.add("page-nav--closed");
+          navMain.classList.remove("page-nav--opened");
         }
       });
     </script>

@@ -1,5 +1,10 @@
 .page-main {
   flex-grow: 1;
   position: relative;
-  top: -28px;
+  top: -29px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

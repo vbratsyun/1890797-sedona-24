@@ -68,6 +68,16 @@
 .advantage__item-container {
   padding: 55px 20px 39px 18px;
   background-color: $blue-gray;
+
+  @media (min-width: $tablet-width) {
+    &--city {
+      padding: 40px 32px 42px;
+    }
+
+    &--bridge {
+      padding: 43px 36px 41px;
+    }
+  }
 }
 
 .advantage__title {
@@ -88,7 +98,7 @@
   &--road::before {
     content: "";
     height: 1px;
-    background-color: #d6d6d6;
+    background-color: $line;
     width: 100%;
     left: 0;
     top: -26px;
@@ -96,8 +106,20 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 185px;
+    margin-left: auto;
+    margin-right: auto;
+
     &--road::before {
       display: none;
+    }
+
+    &--bridge {
+      max-width: 129px;
+    }
+
+    &--gray-theme {
+      max-width: 137px;
     }
   }
 
@@ -125,7 +147,7 @@
   &--road::after {
     content: "";
     height: 1px;
-    background-color: #d6d6d6;
+    background-color: $line;
     width: 100%;
     bottom: -25px;
     left: 0;
@@ -133,12 +155,69 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--residence {
+      max-width: 185px;
+    }
+
+    &--food {
+      max-width: 157px;
+    }
+
+    &--gift {
+      max-width: 196px;
+    }
+
+    &--bridge {
+      max-width: 197px;
+    }
+
+    &--square {
+      max-width: 236px;
+    }
+
+    &--road,
+    &--tourists {
+      max-width: 144px;
+    }
+
     &--road::after {
       display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: auto;
+    margin-right: auto;
+
+    &--residence {
+      max-width: 252px;
+    }
+
+    &--food {
+      max-width: 282px;
+    }
+
+    &--gift {
+      max-width: 215px;
+    }
+
+    &--bridge {
+      max-width: 214px;
+    }
+
+    &--square {
+      max-width: 283px;
+    }
+
+    &--road,
+    &--tourists {
+      max-width: 258px;
+    }
+
     &--road::after {
       display: none;
     }
@@ -150,7 +229,17 @@
 }
 
 .advantage__image {
-  height: 100%;
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 256px;
+  }
 }
 
 .advantage__wrapper {
