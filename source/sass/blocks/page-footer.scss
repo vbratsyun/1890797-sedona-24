@@ -9,6 +9,57 @@
   color: $black;
   margin-top: 29px;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.page-footer__social {
+  @include list();
+
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &-link {
+    @include link();
+    display: block;
+    width: 46px;
+    height: 48px;
+    background-color: $blue-gray;
+    position: relative;
+
+    &:hover {
+      background-color: $hover;
+    }
+
+    &:active {
+      background-color: $active;
+    }
+
+    &:active .page-footer__social-icon {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  fill: $white;
+  cursor: pointer;
 }
 
 .page-footer__wrapper {
@@ -19,40 +70,16 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-  }
-
-  .page-footer__hashtag {
-    margin: 0;
-  }
-
-  .page-footer__social {
-    margin: 0;
-  }
-
-  .page-footer__copyright {
-    margin: 0;
+    margin: 36px auto;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto;
+    margin: 36px auto;
     max-width: 1200px;
   }
 }
 
-.page-footer__social {
-  @include list();
-
-  &-link {
-    @include link();
-  }
-
-  margin-bottom: 40px;
-}
-
 .page-footer__copyright {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 23px;
 
   &-text {
@@ -62,9 +89,39 @@
     color: $black;
     min-width: 121px;
     text-align: center;
+    display: block;
   }
 
   &-link {
     @include link();
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  &-icon {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__copyright-link:hover .page-footer__copyright-text {
+  color: $blue-gray;
+}
+
+.page-footer__copyright-link:hover .page-footer__copyright-icon {
+  fill: $blue-gray;
+}
+
+.page-footer__copyright-link:active .page-footer__copyright-text {
+  color: $black;
+  opacity: 0.3;
+}
+
+.page-footer__copyright-link:active .page-footer__copyright-icon {
+  fill: $black;
+  opacity: 0.3;
 }
