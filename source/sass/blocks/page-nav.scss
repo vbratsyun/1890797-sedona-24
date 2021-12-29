@@ -27,7 +27,7 @@
   right: 0;
   width: 23px;
   height: 4px;
-  background-color: #81b3d2;
+  background-color: $blue-gray;
   box-shadow: 0 10px 0 0 #81b3d2, 0 20px 0 0 #81b3d2;
 }
 
@@ -184,10 +184,6 @@
   .page-nav__toggle {
     display: none;
   }
-
-  // .page-nav__site-list {
-  //   width: 100%;
-  // }
 
   .page-nav__site-list-item {
     min-width: 239px;
