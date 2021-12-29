@@ -1,12 +1,12 @@
 .presentation {
   margin-bottom: 115px;
-  background: url("../../img/catalog/video-mobile.webp") no-repeat;
+  background: url("../../img/catalog/video-mobile.jpg") no-repeat;
   min-height: 201px;
   background-size: cover;
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/catalog/video-mobile@2x.webp") no-repeat;
+    background: url("../../img/catalog/video-mobile@2x.jpg") no-repeat;
     min-height: 201px;
     background-size: cover;
   }
@@ -14,11 +14,11 @@
   @media (min-width: $tablet-width) {
     min-height: 500px;
     margin-bottom: 40px;
-    background: url("../../img/catalog/video-tablet.webp") no-repeat;
+    background: url("../../img/catalog/video-tablet.jpg") no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/catalog/video-tablet@2x.webp") no-repeat;
+      background: url("../../img/catalog/video-tablet@2x.jpg") no-repeat;
       background-size: cover;
     }
   }
@@ -28,11 +28,11 @@
     width: 800px;
     margin: 0 auto;
     margin-bottom: 85px;
-    background: url("../../img/catalog/video-desktop.webp") no-repeat;
+    background: url("../../img/catalog/video-desktop.jpg") no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/catalog/video-desktop@2x.webp") no-repeat;
+      background: url("../../img/catalog/video-desktop@2x.jpg") no-repeat;
       background-size: cover;
     }
   }
