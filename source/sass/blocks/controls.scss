@@ -30,19 +30,46 @@
     }
 
     &--subtitles {
-      margin-left: 75%;
+      margin-left: 74%;
       margin-right: 0;
     }
 
     &--screen {
-      margin-left: 5%;
+      margin-right: 1%;
+      flex-grow: 1;
+
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--subtitles {
+      margin-left: 77%;
       margin-right: 0;
     }
   }
 }
 
 .controls__image {
+  &:hover {
+    fill: $lightblack;
+  }
+
+  &:active {
+    fill: $lightblack;
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     fill: $white;
+
+    &:hover {
+      fill: $white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: $white;
+      opacity: 0.3;
+    }
   }
 }

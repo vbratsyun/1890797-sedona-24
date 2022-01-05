@@ -71,6 +71,33 @@
       padding-bottom: 55px;
     }
   }
+
+  &--warning {
+    padding: 0;
+    padding-bottom: 28px;
+    width: 100%;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 40px;
+      width: 81%;
+      margin: 0 auto;
+      padding: 0;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.fieldset__text {
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .fieldset__container {
