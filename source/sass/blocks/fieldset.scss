@@ -87,6 +87,17 @@
       padding-bottom: 40px;
     }
   }
+
+  &--success {
+    padding: 0;
+    padding-bottom: 37px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 26px;
+    }
+  }
 }
 
 .fieldset__text {
@@ -97,6 +108,14 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 26px;
+  }
+
+  &--success {
+    margin: 0 auto 28px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 34px;
+    }
   }
 }
 
