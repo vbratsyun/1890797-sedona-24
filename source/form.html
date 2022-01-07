@@ -504,9 +504,8 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="form__modal-container form__modal-container--warning">
-      <div class="form__modal form__modal--warning">
-        <section class="form__modal-content">
+    <div class="modal modal--warning">
+        <section class="modal__content modal__content--warning fieldset">
           <h2 class="visually-hidden">
             Информация о незаполнении обязательных полей
           </h2>
@@ -518,18 +517,16 @@
             заполнить
           </p>
           <button
-            class="form__button button form__button--warning"
+            class="form__button form__button--warning"
             type="button"
           >
             Ок
           </button>
         </section>
-      </div>
     </div>
 
-    <div class="form__modal-container form__modal-container--success">
-      <div class="form__modal">
-        <section class="form__modal--success">
+    <div class="modal modal--success">
+        <section class="modal__content modal__content--success fieldset">
           <h2 class="visually-hidden">Информация об отправленном отзыве</h2>
           <p class="fieldset__title fieldset__title--success">
             Ваш отзыв отправлен!
@@ -538,13 +535,12 @@
             Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br />
             В ближайшее время мы опубликуем его на сайте.
           </p>
+          <div class="modal__content--button">
+            <button class="form__button" type="button">
+              Закрыть окно
+            </button>
+          </div>
         </section>
-        <div class="form__button--success">
-          <button class="form__button button" type="button">
-            Закрыть окно
-          </button>
-        </div>
-      </div>
     </div>
 
     <script>

@@ -89,13 +89,13 @@
   }
 
   &--success {
-    padding: 0;
-    padding-bottom: 37px;
+    padding: 38px 39px 37px 37px;
     margin: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 30px;
       line-height: 26px;
+      padding: 55px 99px 37px 97px;
     }
   }
 }
@@ -112,6 +112,7 @@
 
   &--success {
     margin: 0 auto 28px;
+    padding: 0 39px 0 37px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 34px;
