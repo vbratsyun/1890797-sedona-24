@@ -81,6 +81,10 @@
 
 .page-footer__copyright {
   margin-bottom: 23px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
 
   &-text {
     line-height: 26px;
@@ -108,17 +112,8 @@
   }
 }
 
-.page-footer__copyright-link:hover .page-footer__copyright-text {
-  color: $blue-gray;
-}
-
 .page-footer__copyright-link:hover .page-footer__copyright-icon {
   fill: $blue-gray;
-}
-
-.page-footer__copyright-link:active .page-footer__copyright-text {
-  color: $black;
-  opacity: 0.3;
 }
 
 .page-footer__copyright-link:active .page-footer__copyright-icon {
