@@ -11,6 +11,22 @@
     <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.min.css" rel="stylesheet" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.min.js" as="script" />
+    <link
+      rel="preload"
+      href="fonts/ptsans.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsansbold.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="page__body">
     <!-- Header  -->
@@ -224,9 +240,7 @@
               />
             </picture>
             <div
-              class="
-                photo-gallery__feedback photo-gallery__feedback--vegetation
-              "
+              class="photo-gallery__feedback photo-gallery__feedback--vegetation"
             >
               <div class="photo-gallery__figcaption">
                 <h3 class="photo-gallery__title">Местная растительность</h3>
@@ -374,9 +388,7 @@
               />
             </picture>
             <div
-              class="
-                photo-gallery__feedback photo-gallery__feedback--devil-bridge
-              "
+              class="photo-gallery__feedback photo-gallery__feedback--devil-bridge"
             >
               <div class="photo-gallery__figcaption">
                 <h3 class="photo-gallery__title">Мост дьявола</h3>

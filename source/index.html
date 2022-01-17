@@ -11,6 +11,22 @@
     <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.min.css" rel="stylesheet" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.min.js" as="script" />
+    <link
+      rel="preload"
+      href="fonts/ptsans.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsansbold.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="page__body">
     <!-- Header  -->
@@ -95,16 +111,10 @@
           <h2 class="visually-hidden">Преимущества города Седона</h2>
           <ul class="advantage__list">
             <li
-              class="
-                advantage__item
-                advantage__item--first
-                advantage__item--real-city
-              "
+              class="advantage__item advantage__item--first advantage__item--real-city"
             >
               <div
-                class="
-                  advantage__item-container advantage__item-container--city
-                "
+                class="advantage__item-container advantage__item-container--city"
               >
                 <h3 class="advantage__title advantage__title--light">
                   Настоящий городок
@@ -167,12 +177,7 @@
               </picture>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--city
-                advantage__item--icon-house
-                advantage__item--residence
-              "
+              class="advantage__item advantage__item--city advantage__item--icon-house advantage__item--residence"
             >
               <h3 class="advantage__title">Жилье</h3>
               <p
@@ -182,12 +187,7 @@
               </p>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--city
-                advantage__item--icon-gift
-                advantage__item--gift
-              "
+              class="advantage__item advantage__item--city advantage__item--icon-gift advantage__item--gift"
             >
               <h3 class="advantage__title">Сувениры</h3>
               <p class="advantage__description advantage__description--gift">
@@ -196,12 +196,7 @@
               </p>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--city
-                advantage__item--icon-burger
-                advantage__item--food
-              "
+              class="advantage__item advantage__item--city advantage__item--icon-burger advantage__item--food"
             >
               <h3 class="advantage__title">Еда</h3>
               <p class="advantage__description advantage__description--food">
@@ -209,23 +204,13 @@
               </p>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--second
-                advantage__item--devil-bridge
-              "
+              class="advantage__item advantage__item--second advantage__item--devil-bridge"
             >
               <div
-                class="
-                  advantage__item-container advantage__item-container--bridge
-                "
+                class="advantage__item-container advantage__item-container--bridge"
               >
                 <h3
-                  class="
-                    advantage__title
-                    advantage__title--light
-                    advantage__title--bridge
-                  "
+                  class="advantage__title advantage__title--light advantage__title--bridge"
                 >
                   Там есть мост дьявола
                 </h3>
@@ -233,11 +218,7 @@
                   —&nbsp;№2&nbsp;—
                 </p>
                 <p
-                  class="
-                    advantage__description
-                    advantage__description--light
-                    advantage__description--bridge
-                  "
+                  class="advantage__description advantage__description--light advantage__description--bridge"
                 >
                   Да, по нему можно пройти! Если вы осмелитесь, конечно
                 </p>
@@ -293,11 +274,7 @@
               </picture>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--gray-theme
-                advantage__item--square
-              "
+              class="advantage__item advantage__item--gray-theme advantage__item--square"
             >
               <h3 class="advantage__title advantage__title--gray-theme">
                 Небольшая площадь
@@ -308,18 +285,10 @@
               </p>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--gray-theme
-                advantage__item--road
-              "
+              class="advantage__item advantage__item--gray-theme advantage__item--road"
             >
               <h3
-                class="
-                  advantage__title
-                  advantage__title--road
-                  advantage__title--gray-theme
-                "
+                class="advantage__title advantage__title--road advantage__title--gray-theme"
               >
                 Красивая дорога
               </h3>
@@ -330,11 +299,7 @@
               </p>
             </li>
             <li
-              class="
-                advantage__item
-                advantage__item--gray-theme
-                advantage__item--tourists
-              "
+              class="advantage__item advantage__item--gray-theme advantage__item--tourists"
             >
               <h3 class="advantage__title advantage__title--gray-theme">
                 Мало туристов
