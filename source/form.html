@@ -11,11 +11,27 @@
     <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.min.css" rel="stylesheet" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.min.js" as="script" />
+    <link
+      rel="preload"
+      href="fonts/ptsans.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsansbold.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="page__body">
     <!-- Header  -->
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <picture>
           <source
             media="(min-width: 1280px)"
@@ -126,19 +142,12 @@
                 />
               </div>
               <div
-                class="
-                  fieldset__container
-                  fieldset__container--personality
-                  fieldset__container--patronymic
-                "
+                class="fieldset__container fieldset__container--personality fieldset__container--patronymic"
               >
                 <label class="fieldset__container-label" for="patronymic"
                   >Отчество:</label
                 ><input
-                  class="
-                    fieldset__container-input
-                    fieldset__container-input--patronymic
-                  "
+                  class="fieldset__container-input fieldset__container-input--patronymic"
                   type="text"
                   name="patronymic"
                   id="patronymic"
@@ -155,10 +164,7 @@
               <div class="form__contacts">
                 <div class="fieldset__container fieldset__container--phone">
                   <label
-                    class="
-                      fieldset__container-label
-                      fieldset__container-label-contacts
-                    "
+                    class="fieldset__container-label fieldset__container-label-contacts"
                     for="phone"
                     ><span class="fieldset__container-label--hide"
                       >Контактный&nbsp;</span
@@ -166,10 +172,7 @@
                   >
                   <div class="fieldset__container--input">
                     <input
-                      class="
-                        fieldset__container-input
-                        fieldset__container-input--phone
-                      "
+                      class="fieldset__container-input fieldset__container-input--phone"
                       type="tel"
                       name="phone"
                       id="phone"
@@ -178,18 +181,13 @@
                       required
                     />
                     <span
-                      class="
-                        fieldset__container-icon fieldset__container-icon--phone
-                      "
+                      class="fieldset__container-icon fieldset__container-icon--phone"
                     ></span>
                   </div>
                 </div>
                 <div class="fieldset__container fieldset__container--email">
                   <label
-                    class="
-                      fieldset__container-label
-                      fieldset__container-label-contacts
-                    "
+                    class="fieldset__container-label fieldset__container-label-contacts"
                     for="email"
                   >
                     Электронная почта*:</label
@@ -204,9 +202,7 @@
                       required
                     />
                     <span
-                      class="
-                        fieldset__container-icon fieldset__container-icon--email
-                      "
+                      class="fieldset__container-icon fieldset__container-icon--email"
                     ></span>
                   </div>
                 </div>
@@ -229,9 +225,7 @@
                       checked
                     />
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--radio
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--radio"
                     ></span>
                     <span class="fieldset__control-label"
                       >Скорее положительное</span
@@ -247,9 +241,7 @@
                       value="negative"
                     />
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--radio
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--radio"
                     ></span>
                     <span class="fieldset__control-label"
                       >Скорее отрицательное</span
@@ -267,9 +259,7 @@
                       value="not-defined"
                     />
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--radio
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--radio"
                     ></span>
                     <span class="fieldset__control-label"
                       >Затрудняюсь ответить</span
@@ -308,9 +298,7 @@
                       />
                     </svg>
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--checkbox
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--checkbox"
                     ></span>
                     <span class="fieldset__control-label">Мост Дьявола</span>
                   </label>
@@ -339,9 +327,7 @@
                     </svg>
 
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--checkbox
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--checkbox"
                     ></span>
                     <span class="fieldset__control-label">Гора-Колокол</span>
                   </label>
@@ -371,17 +357,13 @@
                       />
                     </svg>
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--checkbox
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--checkbox"
                     ></span>
                     <span class="fieldset__control-label">Слайд-парк</span>
                   </label>
                 </li>
                 <li
-                  class="
-                    fieldset__item-checkbox fieldset__item-checkbox--red-rocks
-                  "
+                  class="fieldset__item-checkbox fieldset__item-checkbox--red-rocks"
                 >
                   <label class="fieldset__control">
                     <input
@@ -404,9 +386,7 @@
                       />
                     </svg>
                     <span
-                      class="
-                        fieldset__control-mark fieldset__control-mark--checkbox
-                      "
+                      class="fieldset__control-mark fieldset__control-mark--checkbox"
                     ></span>
                     <span class="fieldset__control-label">Красные скалы</span>
                   </label>
@@ -483,8 +463,11 @@
         </ul>
 
         <div class="page-footer__copyright">
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
-            <span class="page-footer__copyright-text">Разработано</span>
+          <span class="page-footer__copyright-text">Разработано</span>
+          <a
+            class="page-footer__copyright-link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
             <svg
               class="page-footer__copyright-icon"
               aria-hidden="true"
@@ -505,59 +488,38 @@
     </footer>
     <!-- Модальное окно -->
     <div class="modal modal--warning">
-        <section class="modal__content modal__content--warning fieldset">
-          <h2 class="visually-hidden">
-            Информация о незаполнении обязательных полей
-          </h2>
-          <p class="fieldset__title fieldset__title--warning">
-            Что-то пошло не так!
-          </p>
-          <p class="fieldset__text">
-            Проверьте поля, выделенные красным, скорее всего вы забыли их
-            заполнить
-          </p>
-          <button
-            class="form__button form__button--warning"
-            type="button"
-          >
-            Ок
-          </button>
-        </section>
+      <section class="modal__content modal__content--warning fieldset">
+        <h2 class="visually-hidden">
+          Информация о незаполнении обязательных полей
+        </h2>
+        <p class="fieldset__title fieldset__title--warning">
+          Что-то пошло не так!
+        </p>
+        <p class="fieldset__text">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить
+        </p>
+        <button class="form__button form__button--warning" type="button">
+          Ок
+        </button>
+      </section>
     </div>
 
     <div class="modal modal--success">
-        <section class="modal__content modal__content--success fieldset">
-          <h2 class="visually-hidden">Информация об отправленном отзыве</h2>
-          <p class="fieldset__title fieldset__title--success">
-            Ваш отзыв отправлен!
-          </p>
-          <p class="fieldset__text fieldset__text--success">
-            Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br />
-            В ближайшее время мы опубликуем его на сайте.
-          </p>
-          <div class="modal__content--button">
-            <button class="form__button" type="button">
-              Закрыть окно
-            </button>
-          </div>
-        </section>
+      <section class="modal__content modal__content--success fieldset">
+        <h2 class="visually-hidden">Информация об отправленном отзыве</h2>
+        <p class="fieldset__title fieldset__title--success">
+          Ваш отзыв отправлен!
+        </p>
+        <p class="fieldset__text fieldset__text--success">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br />
+          В ближайшее время мы опубликуем его на сайте.
+        </p>
+        <div class="modal__content--button">
+          <button class="form__button" type="button">Закрыть окно</button>
+        </div>
+      </section>
     </div>
-
-    <script>
-      var navMain = document.querySelector(".page-nav");
-      var navToggle = document.querySelector(".page-nav__toggle");
-
-      navMain.classList.remove("page-nav--nojs");
-
-      navToggle.addEventListener("click", function () {
-        if (navMain.classList.contains("page-nav--closed")) {
-          navMain.classList.remove("page-nav--closed");
-          navMain.classList.add("page-nav--opened");
-        } else {
-          navMain.classList.add("page-nav--closed");
-          navMain.classList.remove("page-nav--opened");
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
