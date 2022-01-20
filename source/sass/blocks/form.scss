@@ -18,7 +18,7 @@
 
     &--personality {
       order: 2;
-      margin-bottom: 73px;
+      margin-bottom: 72px;
       position: relative;
 
       &::before {
@@ -28,12 +28,12 @@
         background-color: $line;
         position: absolute;
         top: 0;
-        left: -20%;
+        left: -19.7%;
         display: block;
       }
 
       @media (min-width: $desktop-width) {
-        margin-bottom: 71px;
+        margin-bottom: 70px;
 
         &::before {
           content: "";
@@ -42,7 +42,7 @@
           background-color: $line;
           position: absolute;
           top: 0;
-          left: -13%;
+          left: -18.5%;
           display: block;
         }
       }
@@ -51,34 +51,40 @@
     &--contacts {
       order: 3;
       grid-column: 1/-1;
-      margin-bottom: 52px;
+      margin-bottom: 51px;
       position: relative;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 51px;
+      }
 
       &::before {
         content: "";
-        width: 18%;
+        width: 18.8%;
         height: 1px;
         background-color: $line;
         position: absolute;
-        top: 13px;
+        top: 9px;
         left: 0;
         display: block;
       }
 
       &::after {
         content: "";
-        width: 18%;
+        width: 18.8%;
         height: 1px;
         background-color: $line;
         position: absolute;
-        top: 13px;
+        top: 9px;
         right: 0;
       }
 
       @media (min-width: $desktop-width) {
+        margin-bottom: 40px;
+
         &::before,
         &::after {
-          width: 26%;
+          width: 29.2%;
         }
       }
     }
@@ -93,7 +99,7 @@
 
       &::before {
         content: "";
-        width: 18%;
+        width: 18.8%;
         height: 1px;
         background-color: $line;
         position: absolute;
@@ -104,7 +110,7 @@
 
       &::after {
         content: "";
-        width: 18%;
+        width: 18.8%;
         height: 1px;
         background-color: $line;
         position: absolute;
@@ -115,7 +121,7 @@
       @media (min-width: $desktop-width) {
         &::before,
         &::after {
-          width: 26%;
+          width: 29.2%;
         }
       }
     }
@@ -126,40 +132,44 @@
 
       &::before {
         content: "";
-        width: 18%;
+        width: 18.8%;
         height: 1px;
         background-color: $line;
         position: absolute;
-        top: 13px;
+        top: 9px;
         left: 0;
         display: block;
       }
 
       &::after {
         content: "";
-        width: 18%;
+        width: 18.8%;
         height: 1px;
         background-color: $line;
         position: absolute;
-        top: 13px;
+        top: 9px;
         right: 0;
       }
 
       @media (min-width: $desktop-width) {
         &::before,
         &::after {
-          width: 26%;
+          width: 29.2%;
         }
       }
     }
   }
 }
 
-@media (min-width: $tablet-width) {
-  .form {
+.form {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 109px;
+    column-gap: 105px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 149px;
   }
 }
 
@@ -167,14 +177,14 @@
   @include fieldset();
 
   &--textarea {
-    margin-bottom: 51px;
+    margin-bottom: 46px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 58px;
+      margin-bottom: 53px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 58px;
+      margin-bottom: 53px;
     }
   }
 
@@ -191,6 +201,7 @@
   &--personality {
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
+      margin-left: 5.5px;
     }
   }
 
@@ -205,8 +216,13 @@
   @media (min-width: $desktop-width) {
     display: grid;
     align-items: flex-start;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     column-gap: 79px;
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+      top: -1px;
+    }
   }
 }
 
@@ -228,6 +244,19 @@
   width: 100%;
 
   @include button();
+
+  &-text {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      left: -6px;
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 0;
+    }
+  }
 
   &:hover {
     background: $hover;
@@ -251,6 +280,14 @@
       max-width: 272px;
     }
   }
+
+  &--close {
+    font-size: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+  }
 }
 
 .form__required-fields {
@@ -261,5 +298,6 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-top: 19px;
   }
 }

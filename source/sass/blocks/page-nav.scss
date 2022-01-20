@@ -28,7 +28,7 @@
   width: 23px;
   height: 4px;
   background-color: $blue-gray;
-  box-shadow: 0 10px 0 0 #81b3d2, 0 20px 0 0 #81b3d2;
+  box-shadow: 0 9px 0 0 #81b3d2, 0 19px 0 0 #81b3d2;
 }
 
 .page-nav--opened .page-nav__toggle {
@@ -67,8 +67,13 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 
   @include list();
+
+  @media (min-width: $tablet-width) {
+    z-index: 0;
+  }
 }
 
 .page-nav__site-list-item--academy {
@@ -129,6 +134,9 @@
     border: none;
     color: $black;
     background: none;
+    font-size: inherit;
+    line-height: 26px;
+    padding-top: 15px;
 
     &--academy {
       background: none;
@@ -163,11 +171,11 @@
   }
 
   .page-nav__site-list-item--photo {
-    margin-right: 70px;
+    margin-right: 79px;
   }
 
   .page-nav__site-list-item--form {
-    margin-left: 70px;
+    margin-left: 79px;
   }
 
   .page-nav__toggle {

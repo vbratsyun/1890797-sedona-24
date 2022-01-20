@@ -1,19 +1,5 @@
-.intro {
-  @media (min-width: $tablet-width) {
-    box-shadow: 0 0.4em 5px rgb(122 122 122 / 50%);
-  }
-
-  @media (min-width: $desktop-width) {
-    box-shadow: none;
-  }
-
-  &--page-form {
-    box-shadow: none;
-  }
-}
-
 .intro__wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   display: grid;
   height: 389px;
   background-color: $box-icon;
@@ -36,7 +22,7 @@
     height: 518px;
     background-image: url("../../img/intro-triangle.svg"),
       url("../../img/index/back-tablet.jpg");
-    background-size: 1200px 57px, cover;
+    background-size: 156% 56px, 100%;
     background-repeat: no-repeat;
     background-position: bottom;
 
@@ -50,7 +36,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     background-image: url("../../img/intro-triangle.svg"),
       url("../../img/index/back-desktop.jpg");
     background-size: 1200px 57px, cover;
@@ -68,7 +54,7 @@
 
   &--page-catalog,
   &--page-form {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     height: 158px;
     background-image: url("../../img/intro-triangle.svg"),
       url("../../img/catalog/back-mobile.jpg");
@@ -85,8 +71,8 @@
     }
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 58px;
-      height: 295px;
+      margin-bottom: 63px;
+      height: 290px;
       background-image: url("../../img/intro-triangle.svg"),
         url("../../img/catalog/back-tablet.jpg");
       background-size: 1200px 57px, cover;
@@ -103,7 +89,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 96px;
+      margin-bottom: 100px;
       height: 301px;
       background-image: url("../../img/intro-triangle.svg"),
         url("../../img/catalog/back-desktop.jpg");
@@ -126,7 +112,7 @@
     height: 158px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 63px;
+      margin-bottom: 61px;
       height: 291px;
     }
 
@@ -139,6 +125,8 @@
 
 .intro__slogan {
   margin: auto;
+  position: relative;
+  top: 3px;
 
   @media (min-width: $tablet-width) {
     min-width: 461px;
@@ -150,8 +138,16 @@
   }
 
   &--page-catalog {
+    top: -8px;
+
     @media (min-width: $tablet-width) {
-      margin-top: 100px;
+      top: 20px;
+      left: 1.5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 28px;
+      left: -2.5px;
     }
   }
 }
