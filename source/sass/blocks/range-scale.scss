@@ -32,8 +32,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 69%;
-    left: -10%;
+    width: 67.5%;
+    left: -8.5%;
   }
 }
 
@@ -41,8 +41,8 @@
   @include button;
 
   position: absolute;
-  top: -4px;
-  left: 14%;
+  top: -2.5px;
+  left: 14.5%;
   width: 10px;
   height: 10px;
   background-color: $white;
@@ -54,10 +54,10 @@
   opacity: 1;
 
   @media (min-width: $tablet-width) {
-    left: 29%;
+    left: 28.8%;
   }
 
   @media (min-width: $desktop-width) {
-    left: 23%;
+    left: 20%;
   }
 }

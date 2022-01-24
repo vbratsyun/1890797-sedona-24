@@ -7,11 +7,11 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $black;
-  margin-top: 29px;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-top: 3px;
   }
 }
 
@@ -48,6 +48,8 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    position: relative;
+    left: -5px;
   }
 }
 
@@ -65,17 +67,26 @@
 .page-footer__wrapper {
   text-align: center;
 
+  &--form {
+    position: relative;
+    left: -2px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 36px auto;
+    margin: 37px auto;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 36px auto;
-    max-width: 1200px;
+    margin: 37px -17px;
+    max-width: 1280px;
   }
 }
 
@@ -91,9 +102,9 @@
     font-weight: 400;
     text-transform: uppercase;
     color: $black;
-    min-width: 121px;
     text-align: center;
     display: block;
+    padding-right: 12px;
   }
 
   &-link {

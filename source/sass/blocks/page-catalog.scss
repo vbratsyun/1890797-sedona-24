@@ -1,6 +1,10 @@
 .page-catalog {
   flex-grow: 1;
   margin-top: -28px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -30px;
+  }
 }
 
 .page-catalog__promo {
@@ -11,18 +15,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 61px;
+    margin-bottom: 62px;
   }
 }
 
 .page-catalog__promo-presentation {
-  margin-bottom: 33px;
-
   @media (min-width: $tablet-width) {
-    margin-bottom: 67px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 66px;
+    margin-bottom: 61px;
   }
 }

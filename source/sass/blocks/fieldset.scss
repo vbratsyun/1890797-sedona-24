@@ -13,16 +13,21 @@
   text-transform: uppercase;
   color: $black;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 19px;
+  padding-top: 22px;
+  padding-bottom: 20px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
+
   &--contacts {
-    padding-bottom: 17px;
+    padding-bottom: 15px;
+    padding-top: 21px;
 
     @media (min-width: $tablet-width) {
       padding: 0;
-      padding-bottom: 21px;
+      padding-bottom: 19px;
     }
 
     @media (min-width: $desktop-width) {
@@ -40,20 +45,21 @@
 
   &--impression {
     padding-bottom: 37px;
+    padding-top: 20px;
 
     @media (min-width: $tablet-width) {
       padding: 0;
-      padding-bottom: 73px;
+      padding-bottom: 72px;
       text-align: left;
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 78px;
+      padding-left: 80px;
     }
   }
 
   &--sight {
-    padding-top: 15px;
+    padding-top: 16px;
     padding-bottom: 36px;
 
     @media (min-width: $tablet-width) {
@@ -73,29 +79,35 @@
   }
 
   &--warning {
-    padding: 0;
-    padding-bottom: 28px;
     width: 100%;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 26px;
 
     @media (min-width: $tablet-width) {
       font-size: 30px;
       line-height: 40px;
       width: 81%;
-      margin: 0 auto;
       padding: 0;
-      padding-bottom: 40px;
+      margin: 23px auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 22px auto 25px;
     }
   }
 
   &--success {
-    padding: 38px 39px 37px 37px;
-    margin: 0;
+    margin: 38px 39px 26px 37px;
+    padding: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 30px;
       line-height: 26px;
-      padding: 55px 99px 37px 97px;
+      margin: 51px 99px 31px 97px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 32px;
     }
   }
 }
@@ -107,15 +119,14 @@
   margin: 0 auto 22px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 26px;
+    margin-bottom: 38px;
   }
 
   &--success {
-    margin: 0 auto 28px;
-    padding: 0 39px 0 37px;
+    margin: 0 39px 38px 37px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 34px;
+      margin-bottom: 43px;
     }
   }
 }
@@ -125,7 +136,7 @@
 
   &--personality {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
 
   &--phone {
@@ -139,7 +150,7 @@
       display: grid;
       align-items: baseline;
       grid-template-columns: min-content 1fr;
-      margin-bottom: 0;
+      margin-bottom: 12px;
     }
   }
 
@@ -160,6 +171,12 @@
   &--input {
     display: grid;
     grid-template-columns: auto 58px;
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: auto 63px;
+      position: relative;
+      left: 5px;
+    }
 
     &:hover {
       background: $box-icon;
@@ -183,7 +200,12 @@
   margin-right: 13px;
 
   &-contacts {
-    margin-bottom: 8px;
+    margin-bottom: 7.5px;
+    margin-left: 22px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: -1px;
+    }
   }
 
   &--hide {
@@ -199,18 +221,21 @@
   @include input();
 
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15.5px;
   line-height: 26px;
   color: $black;
   background: $lightgray;
   width: 100%;
-  padding: 18px 20px 14px 22px;
+  padding: 18px 20px 14px 24px;
   outline: 4px solid transparent;
   box-sizing: border-box;
 
-  &--phone,
-  &--email {
+  &--phone {
     padding: 18px 21px 14px 22px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 20px;
+    }
   }
 
   &--patronymic {
@@ -242,10 +267,10 @@
     content: "";
     width: 18px;
     height: 18px;
-    top: 0;
+    top: 1px;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 1px;
     margin: auto;
     position: absolute;
     background: url("../../img/phone.svg") no-repeat;
@@ -272,14 +297,15 @@
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding: 0 100px;
-      column-gap: 44px;
+      padding: 0 91px;
+      column-gap: 54px;
     }
 
     @media (min-width: $desktop-width) {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, auto);
       padding: 0;
+      column-gap: 66px;
     }
   }
 }
@@ -336,13 +362,13 @@
   color: $black;
   background: $lightgray;
   width: 100%;
-  padding: 13px 0 29px 21px;
+  padding: 12px 0 16px 21px;
   border: none;
   margin: 0;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 18px 21px 24px 21px;
+    padding: 17px 21px 11px;
   }
 }
 
@@ -350,6 +376,24 @@
   position: relative;
   display: block;
   padding-left: 78px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 84px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 81px;
+  }
+
+  &--radio {
+    @media (min-width: $tablet-width) {
+      padding-left: 75px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 79px;
+    }
+  }
 }
 
 .fieldset__control-mark {
@@ -357,13 +401,17 @@
   background: $lightgray;
 
   &--radio {
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: 1px;
     bottom: 0;
     margin: auto;
     width: 53px;
     height: 53px;
     border-radius: 50%;
+
+    @media (min-width: $desktop-width) {
+      left: 5px;
+    }
 
     &::before {
       content: "";
@@ -386,9 +434,18 @@
     left: 0;
     bottom: 0;
     margin: auto;
-    width: 51px;
-    height: 51px;
+    width: 56px;
+    height: 56px;
     border-radius: 5px;
+
+    @media (min-width: $tablet-width) {
+      left: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 0;
+      border-radius: 0;
+    }
   }
 
   &:hover {
@@ -419,6 +476,14 @@
   left: 16px;
   z-index: 1;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    left: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 17px;
+  }
 }
 
 .fieldset__control-checkbox[type="checkbox"]:checked + .fieldset__image {

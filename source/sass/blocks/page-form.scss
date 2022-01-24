@@ -1,18 +1,22 @@
 .page-form {
   flex-grow: 1;
   margin-top: -28px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -30px;
+  }
 }
 
 .page-form__form {
-  margin-bottom: 48px;
+  margin-bottom: 76px;
 
   @media (min-width: $tablet-width) {
     padding: 0 60px;
-    margin-bottom: 61px;
+    margin-bottom: 96px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 120px;
-    margin-bottom: 66px;
+    margin-bottom: 101px;
   }
 }

@@ -2,11 +2,11 @@
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 59px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 63px;
+    margin-bottom: 62px;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .photo-gallery__item {
-  padding: 22px 20px 15px;
+  padding: 23px 20px 15px;
   position: relative;
 
   &::before {
@@ -74,7 +74,7 @@
 }
 
 .photo-gallery__image {
-  margin-bottom: 11px;
+  margin-bottom: 10.5px;
   width: 100%;
   object-fit: cover;
 
@@ -90,7 +90,7 @@
 .photo-gallery__feedback {
   @media (min-width: $tablet-width) {
     display: flex;
-    padding: 22px 20px 15px;
+    padding: 16px 20px 6px;
     box-sizing: border-box;
 
     &--spaces,
@@ -135,6 +135,7 @@
   text-transform: uppercase;
   color: $black;
   margin: 0;
+  font-size: 14px;
 
   @media (min-width: $desktop-width) {
     color: $white;
@@ -153,11 +154,31 @@
 
 .photo-gallery__reaction {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  position: relative;
+  top: -1px;
+
+  @media (min-width: $tablet-width) {
+    &--spaces {
+      top: 10px;
+    }
+
+    &--vegetation,
+    &--devil-bridge {
+      top: 9.5px;
+      left: -9px;
+    }
+
+    &--road {
+      top: 9.5px;
+      left: -16px;
+    }
+  }
 }
 
 .photo-gallery__icon {
   margin-right: 14px;
+  margin-top: 1px;
 
   @media (min-width: $tablet-width) {
     margin-right: 9px;

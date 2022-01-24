@@ -216,7 +216,7 @@
               </legend>
               <ul class="fieldset__list">
                 <li class="fieldset__item-radio">
-                  <label class="fieldset__control"
+                  <label class="fieldset__control fieldset__control--radio"
                     ><input
                       class="visually-hidden fieldset__control-radio"
                       type="radio"
@@ -233,7 +233,7 @@
                   </label>
                 </li>
                 <li class="fieldset__item-radio">
-                  <label class="fieldset__control"
+                  <label class="fieldset__control fieldset__control--radio"
                     ><input
                       class="visually-hidden fieldset__control-radio"
                       type="radio"
@@ -251,7 +251,7 @@
                 <li
                   class="fieldset__item-radio fieldset__item-radio--not-defined"
                 >
-                  <label class="fieldset__control"
+                  <label class="fieldset__control fieldset__control--radio"
                     ><input
                       class="visually-hidden fieldset__control-radio"
                       type="radio"
@@ -412,7 +412,7 @@
                 class="form__button button form__button--disabled"
                 type="submit"
               >
-                Отправить отзыв
+                <span class="form__button-text">Отправить отзыв</span>
               </button>
               <p class="form__required-fields">* — обязательные поля</p>
             </div>
@@ -423,7 +423,7 @@
 
     <!-- Footer  -->
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper page-footer__wrapper--form">
         <h2 class="visually-hidden">Контакты</h2>
         <a class="page-footer__hashtag" href="#">#visitSEDONA</a>
         <ul class="page-footer__social">
@@ -516,7 +516,9 @@
           В ближайшее время мы опубликуем его на сайте.
         </p>
         <div class="modal__content--button">
-          <button class="form__button" type="button">Закрыть окно</button>
+          <button class="form__button form__button--close" type="button">
+            Закрыть окно
+          </button>
         </div>
       </section>
     </div>
