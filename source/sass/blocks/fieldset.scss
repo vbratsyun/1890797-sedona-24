@@ -6,6 +6,56 @@
   }
 }
 
+.fieldset__button {
+  padding-top: 19px;
+  padding-bottom: 14px;
+  font-size: 21px;
+  width: 100%;
+
+  @include button();
+
+  &:hover {
+    background: $hover;
+  }
+
+  &:active {
+    background: $active;
+    color: rgba($color: $white, $alpha: 0.3);
+  }
+
+  &--warning {
+    width: 76%;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 auto;
+      width: 88.6%;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 272px;
+    }
+  }
+
+  &--close {
+    font-size: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+  }
+
+  &-wrapper {
+    padding: 20px;
+    background-color: $lightgray;
+
+    @media (min-width: $tablet-width) {
+      padding: 44px 91px;
+      box-sizing: border-box;
+    }
+  }
+}
+
 .fieldset__title {
   font-weight: 700;
   font-size: 18px;
@@ -168,7 +218,7 @@
     }
   }
 
-  &--input {
+  &-box {
     display: grid;
     grid-template-columns: auto 58px;
 
@@ -208,7 +258,7 @@
     }
   }
 
-  &--hide {
+  &-hide {
     display: inline-block;
 
     @media (min-width: $desktop-width) {
