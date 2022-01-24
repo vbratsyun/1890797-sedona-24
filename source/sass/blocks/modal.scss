@@ -68,14 +68,4 @@
       max-width: 640px;
     }
   }
-
-  &--button {
-    padding: 20px;
-    background-color: $lightgray;
-
-    @media (min-width: $tablet-width) {
-      padding: 44px 91px;
-      box-sizing: border-box;
-    }
-  }
 }

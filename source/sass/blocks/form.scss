@@ -266,28 +266,6 @@
     background: $active;
     color: rgba($color: $white, $alpha: 0.3);
   }
-
-  &--warning {
-    width: 76%;
-    margin: 0 auto;
-
-    @media (min-width: $tablet-width) {
-      margin: 0 auto;
-      width: 88.6%;
-    }
-
-    @media (min-width: $desktop-width) {
-      max-width: 272px;
-    }
-  }
-
-  &--close {
-    font-size: 18px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 21px;
-    }
-  }
 }
 
 .form__required-fields {
