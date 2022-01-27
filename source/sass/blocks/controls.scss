@@ -9,7 +9,11 @@
 
   background-color: transparent;
   padding: 0;
-  margin-top: 2.5%;
+  outline: 4px solid transparent;
+
+  &:focus {
+    outline-color: $focus;
+  }
 
   &--play {
     margin-left: 8.5%;
@@ -25,7 +29,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 0.7%;
+    margin-top: -0.5%;
 
     &--play {
       margin-left: 5%;
@@ -34,12 +38,7 @@
 
     &--subtitles {
       margin-left: 73.5%;
-      margin-right: 0;
-    }
-
-    &--screen {
-      margin-right: 1.2%;
-      flex-grow: 1;
+      margin-right: 5%;
     }
   }
 
@@ -50,12 +49,15 @@
 
     &--subtitles {
       margin-left: 78%;
-      margin-right: 0;
+      margin-right: 4%;
     }
   }
 }
 
 .controls__image {
+  display: block;
+  outline: 4px solid transparent;
+
   &:hover {
     fill: $lightblack;
   }

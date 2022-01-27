@@ -7,29 +7,29 @@
 
   &--warning {
     visibility: hidden;
-    top: 112px;
+    top: 110px;
     z-index: 2;
 
     @media (min-width: $tablet-width) {
-      top: 287px;
+      top: 242px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 401px;
+      top: 357px;
     }
   }
 
   &--success {
-    top: 182px;
+    top: 188px;
     z-index: 1;
     visibility: hidden;
 
     @media (min-width: $tablet-width) {
-      top: 123px;
+      top: 90px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 135px;
+      top: 93px;
     }
   }
 }

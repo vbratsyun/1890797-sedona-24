@@ -1,8 +1,8 @@
 .intro__wrapper {
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   display: grid;
   height: 389px;
-  background-color: $box-icon;
+  background-color: #3d4952;
   background-image: url("../../img/intro-triangle.svg"),
     url("../../img/index/back-mobile.jpg");
   background-size: cover;
@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 44px;
+    margin-bottom: 43px;
     height: 518px;
     background-image: url("../../img/intro-triangle.svg"),
       url("../../img/index/back-tablet.jpg");
@@ -36,7 +36,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 54px;
+    margin-bottom: 55px;
     background-image: url("../../img/intro-triangle.svg"),
       url("../../img/index/back-desktop.jpg");
     background-size: 1200px 57px, cover;

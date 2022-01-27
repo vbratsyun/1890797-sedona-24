@@ -44,15 +44,15 @@
       font-size: 21px;
     }
   }
+}
 
-  &-wrapper {
-    padding: 20px;
-    background-color: $lightgray;
+.fieldset__button-wrapper {
+  padding: 20px;
+  background-color: $lightgray;
 
-    @media (min-width: $tablet-width) {
-      padding: 44px 91px;
-      box-sizing: border-box;
-    }
+  @media (min-width: $tablet-width) {
+    padding: 44px 91px;
+    box-sizing: border-box;
   }
 }
 
@@ -126,6 +126,12 @@
       padding: 0;
       padding-bottom: 55px;
     }
+  }
+
+  &--contacts,
+  &--sight,
+  &--emotions {
+    max-width: 308px;
   }
 
   &--warning {
@@ -218,28 +224,30 @@
     }
   }
 
-  &-box {
-    display: grid;
-    grid-template-columns: auto 58px;
-
-    @media (min-width: $desktop-width) {
-      grid-template-columns: auto 63px;
-      position: relative;
-      left: 5px;
-    }
-
-    &:hover {
-      background: $box-icon;
-    }
-
-    &:active {
-      background: transparent;
-      outline: 4px solid $box-icon;
-    }
-  }
-
   &--patronymic {
     margin-bottom: 0;
+  }
+}
+
+.fieldset__container-box {
+  display: grid;
+  grid-template-columns: auto 58px;
+  outline: 4px solid transparent;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto 63px;
+    position: relative;
+    left: 5px;
+  }
+
+  &:hover {
+    background: $box-icon;
+  }
+
+  &:active {
+    background: transparent;
+    outline: 4px solid $box-icon;
   }
 }
 
@@ -248,22 +256,27 @@
   line-height: 26px;
   text-transform: uppercase;
   margin-right: 13px;
+  position: relative;
 
-  &-contacts {
-    margin-bottom: 7.5px;
-    margin-left: 22px;
-
-    @media (min-width: $desktop-width) {
-      margin-left: -1px;
-    }
+  &--patronymic {
+    top: -1px;
   }
+}
 
-  &-hide {
-    display: inline-block;
+.fieldset__container-label-contacts {
+  margin-bottom: 7.5px;
+  margin-left: 22px;
 
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
+  @media (min-width: $desktop-width) {
+    margin-left: -1px;
+  }
+}
+
+.fieldset__container-label-hide {
+  display: inline-block;
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -276,15 +289,22 @@
   color: $black;
   background: $lightgray;
   width: 100%;
-  padding: 18px 20px 14px 24px;
+  padding: 18px 16px 14px 24px;
   outline: 4px solid transparent;
-  box-sizing: border-box;
 
   &--phone {
-    padding: 18px 21px 14px 22px;
+    padding: 15px 36px 9px 22px;
 
     @media (min-width: $desktop-width) {
-      padding-left: 20px;
+      padding-top: 18.5px;
+    }
+  }
+
+  &--email {
+    padding: 13px 36px 9px 22px;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 18.5px;
     }
   }
 
@@ -300,6 +320,10 @@
     background: $box-icon;
   }
 
+  &:focus {
+    outline-color: $focus;
+  }
+
   &:active {
     background: transparent;
     outline: 4px solid $box-icon;
@@ -312,6 +336,10 @@
   height: 58px;
   background-color: $box-icon;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 59px;
+  }
 
   &--phone::after {
     content: "";
@@ -349,6 +377,8 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 0 91px;
       column-gap: 54px;
+      row-gap: 62px;
+      align-items: center;
     }
 
     @media (min-width: $desktop-width) {
@@ -384,7 +414,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 62px;
+    margin-bottom: 0;
 
     &--red-rocks,
     &--park {
@@ -412,10 +442,16 @@
   color: $black;
   background: $lightgray;
   width: 100%;
-  padding: 12px 0 16px 21px;
+  padding: 12px 23px 16px 21px;
   border: none;
   margin: 0;
   box-sizing: border-box;
+  resize: none;
+  outline: 4px solid transparent;
+
+  &:focus {
+    outline-color: $focus;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 17px 21px 11px;
@@ -426,6 +462,7 @@
   position: relative;
   display: block;
   padding-left: 78px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding-left: 84px;
@@ -458,6 +495,7 @@
     width: 53px;
     height: 53px;
     border-radius: 50%;
+    outline: 4px solid transparent;
 
     @media (min-width: $desktop-width) {
       left: 5px;
@@ -487,6 +525,7 @@
     width: 56px;
     height: 56px;
     border-radius: 5px;
+    outline: 4px solid transparent;
 
     @media (min-width: $tablet-width) {
       left: 3px;
@@ -516,23 +555,46 @@
   }
 }
 
+.fieldset__control-radio:focus ~ .fieldset__control-mark--radio {
+  outline-color: $focus;
+}
+
+.fieldset__control-radio:focus ~ .fieldset__control-label {
+  color: $focus;
+}
+
+.fieldset__control-radio:focus ~ .fieldset__control-mark--radio::before {
+  background-color: $focus;
+}
+
 .fieldset__control-radio[type="radio"]:checked + .fieldset__control-mark--radio::before {
   display: block;
 }
 
 .fieldset__image {
   position: absolute;
-  top: 5px;
-  left: 16px;
+  top: 0;
+  right: 225px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   z-index: 1;
   display: none;
 
   @media (min-width: $tablet-width) {
-    left: 21px;
+    right: 143px;
   }
 
   @media (min-width: $desktop-width) {
-    left: 17px;
+    right: 134px;
+
+    &--park {
+      right: 113px;
+    }
+
+    &--red-rocks {
+      right: 142px;
+    }
   }
 }
 
@@ -546,6 +608,18 @@
 
 .fieldset__control:hover .fieldset__image {
   fill: $lightblack;
+}
+
+.fieldset__control-checkbox:focus ~ .fieldset__control-mark--checkbox {
+  outline-color: $focus;
+}
+
+.fieldset__control-checkbox:focus ~ .fieldset__control-label {
+  color: $focus;
+}
+
+.fieldset__control-checkbox:focus ~ .fieldset__image {
+  fill: $focus;
 }
 
 .fieldset__control:active .fieldset__control-checkbox {

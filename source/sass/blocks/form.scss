@@ -80,7 +80,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        margin-bottom: 40px;
+        margin-bottom: 41px;
 
         &::before,
         &::after {
@@ -242,29 +242,34 @@
   padding-bottom: 14px;
   font-size: 21px;
   width: 100%;
+  outline: 4px solid transparent;
 
   @include button();
-
-  &-text {
-    position: relative;
-
-    @media (min-width: $tablet-width) {
-      left: -6px;
-      display: block;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 0;
-    }
-  }
 
   &:hover {
     background: $hover;
   }
 
+  &:focus {
+    outline-color: $focus;
+  }
+
   &:active {
     background: $active;
     color: rgba($color: $white, $alpha: 0.3);
+  }
+}
+
+.form__button-text {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    left: -6px;
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 0;
   }
 }
 

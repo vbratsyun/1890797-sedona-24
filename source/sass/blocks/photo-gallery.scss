@@ -36,7 +36,7 @@
     height: 1px;
     background-color: $box-icon;
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
   }
 
@@ -77,6 +77,18 @@
   margin-bottom: 10.5px;
   width: 100%;
   object-fit: cover;
+
+  &--vegetation {
+    margin-bottom: 9.5px;
+  }
+
+  &--road {
+    margin-bottom: 9px;
+  }
+
+  &--devil-bridge {
+    margin-bottom: 8.5px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -176,9 +188,22 @@
   }
 }
 
+.photo-gallery__reaction-button {
+  @include button();
+
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+
+  &:focus .photo-gallery__icon {
+    outline-color: $focus;
+  }
+}
+
 .photo-gallery__icon {
   margin-right: 14px;
   margin-top: 1px;
+  outline: 4px solid transparent;
 
   @media (min-width: $tablet-width) {
     margin-right: 9px;

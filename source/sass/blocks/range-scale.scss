@@ -48,10 +48,14 @@
   background-color: $white;
   border-radius: 50%;
   cursor: pointer;
-  outline: none;
   padding: 0;
   box-sizing: border-box;
   opacity: 1;
+  outline: 6px solid transparent;
+
+  &:focus {
+    outline-color: $focus;
+  }
 
   @media (min-width: $tablet-width) {
     left: 28.8%;

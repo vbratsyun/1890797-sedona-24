@@ -19,6 +19,10 @@
     max-width: 484px;
     margin: 0 auto;
     margin-bottom: 41px;
+
+    &--page-main {
+      margin-bottom: 44px;
+    }
   }
 
   &--page-catalog {
@@ -83,16 +87,25 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 26px;
-    margin: 0 0 32px;
+    margin: 0 0 31px;
 
     &--page-catalog,
     &--page-form {
       font-size: 30px;
     }
+
+    &--page-form {
+      margin-bottom: 32px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    left: -1px;
+    left: -2px;
+    margin-bottom: 29px;
+
+    &--page-form {
+      margin-bottom: 31px;
+    }
   }
 
   &--page-catalog {
@@ -100,7 +113,7 @@
     left: 2px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 34px;
+      margin-bottom: 33px;
       left: 0;
     }
   }

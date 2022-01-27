@@ -1,18 +1,35 @@
+.page-nav {
+  position: relative;
+  top: -84px;
+  width: auto;
+  min-height: 56px;
+  background-color: $white;
+
+  @media (min-width: $desktop-width) {
+    top: -97px;
+  }
+}
+
 .page-nav__toggle {
   @include button();
 
   position: absolute;
-  top: 17px;
-  right: 20px;
-  width: 23px;
-  height: 22px;
+  top: 6px;
+  right: 10px;
+  width: 43px;
+  height: 42px;
   cursor: pointer;
   background-color: transparent;
   z-index: 2;
-  padding: 27px;
+  outline: 4px solid transparent;
 
   &:hover {
     opacity: 0.6;
+  }
+
+  &:focus {
+    outline-color: $focus;
+    padding: 0;
   }
 
   &:active {
@@ -23,25 +40,40 @@
 .page-nav--closed .page-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 23px;
   height: 4px;
   background-color: $blue-gray;
   box-shadow: 0 9px 0 0 #81b3d2, 0 19px 0 0 #81b3d2;
 }
 
-.page-nav--opened .page-nav__toggle {
-  top: 0;
-  left: auto;
-  right: 0;
+@media (min-width: $mobile-width-only) {
+  .page-nav--closed .page-nav__site-list-item {
+    display: none;
+  }
+}
 
+.page-nav--nojs .page-nav__toggle {
+  display: none;
+}
+
+.page-nav--nojs .page-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.page-nav--nojs .page-nav__site-list-item {
+  display: block;
+}
+
+.page-nav--opened .page-nav__toggle {
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 25px;
-    right: 17px;
+    top: 20px;
+    right: 7px;
     width: 28px;
     height: 4px;
     background-color: $white;
@@ -68,11 +100,16 @@
   top: 0;
   width: 100%;
   z-index: 1;
+  background-color: $blue-gray;
 
   @include list();
 
   @media (min-width: $tablet-width) {
     z-index: 0;
+    background-color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
   }
 }
 
@@ -112,43 +149,52 @@
     background: $active;
     color: rgba($color: $white, $alpha: 0.3);
   }
+
+  @media (min-width: $mobile-width-only) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
-@media (min-width: $mobile-width-only) {
-  .page-nav--closed .page-nav__site-list {
-    display: none;
+.page-nav__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    border: none;
+    flex-wrap: wrap;
+    row-gap: 24px;
   }
 
-  .page-nav--nojs .page-nav__toggle {
-    display: none;
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .page-nav__wrapper {
-    display: flex;
-    border: none;
-  }
-
   .page-nav__site-list-link {
-    border: none;
     color: $black;
     background: none;
     font-size: inherit;
     line-height: 26px;
-    padding-top: 15px;
+    padding: 13px;
+    border: none;
+    outline: 4px solid transparent;
 
     &--academy {
       background: none;
     }
 
     &--current {
-      color: #766357;
+      color: $blue-gray;
     }
 
     &:hover {
       color: $blue-gray;
       background: none;
+    }
+
+    &:focus {
+      outline-color: $focus;
     }
 
     &:active {
@@ -161,21 +207,56 @@
   .page-nav--closed .page-nav__site-list {
     background-color: $white;
     display: flex;
+    row-gap: 24px;
+    flex-wrap: wrap;
     width: 100%;
   }
 
   .page-nav__site-list-item {
     min-width: 153px;
     position: relative;
-    flex-grow: 1;
-  }
 
-  .page-nav__site-list-item--photo {
-    margin-right: 79px;
-  }
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      max-width: 153px;
+      flex-grow: 1;
+    }
 
-  .page-nav__site-list-item--form {
-    margin-left: 79px;
+    &--hidden {
+      visibility: hidden;
+
+      max-width: none;
+    }
+
+    &--form {
+      @media (min-width: $tablet-width) {
+        left: 3px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 0;
+      }
+    }
+
+    &--photo {
+      @media (min-width: $tablet-width) {
+        left: 1px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 0;
+      }
+    }
+
+    &--academy {
+      @media (min-width: $desktop-width) {
+        left: 0;
+      }
+    }
   }
 
   .page-nav__toggle {
@@ -207,13 +288,5 @@
     &:active {
       background: none;
     }
-  }
-
-  .page-nav__site-list-item--photo {
-    margin-right: 122px;
-  }
-
-  .page-nav__site-list-item--form {
-    margin-left: 122px;
   }
 }
