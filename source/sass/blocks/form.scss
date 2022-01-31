@@ -11,6 +11,10 @@
     left: 0;
   }
 
+  &--emotions {
+    top: -16px;
+  }
+
   @media (min-width: $tablet-width) {
     &::before {
       display: none;
@@ -18,7 +22,7 @@
 
     &--personality {
       order: 2;
-      margin-bottom: 72px;
+      margin-bottom: 52px;
       position: relative;
 
       &::before {
@@ -33,7 +37,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        margin-bottom: 70px;
+        margin-bottom: 51px;
 
         &::before {
           content: "";
@@ -55,7 +59,7 @@
       position: relative;
 
       @media (min-width: $tablet-width) {
-        margin-bottom: 51px;
+        margin-bottom: 36px;
       }
 
       &::before {
@@ -80,7 +84,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        margin-bottom: 41px;
+        margin-bottom: 32px;
 
         &::before,
         &::after {
@@ -190,11 +194,11 @@
 
   &--singht {
     @media (min-width: $tablet-width) {
-      margin-bottom: 85px;
+      margin-bottom: 101px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 83px;
+      margin-bottom: 99px;
     }
   }
 

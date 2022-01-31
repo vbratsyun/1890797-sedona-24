@@ -8,15 +8,15 @@
 }
 
 .page-form__form {
-  margin-bottom: 76px;
+  margin-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     padding: 0 60px;
-    margin-bottom: 96px;
+    margin-bottom: 80px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 120px;
-    margin-bottom: 101px;
+    margin-bottom: 84px;
   }
 }

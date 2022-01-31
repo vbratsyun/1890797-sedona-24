@@ -73,7 +73,7 @@
 
   &--contacts {
     padding-bottom: 15px;
-    padding-top: 21px;
+    padding-top: 22px;
 
     @media (min-width: $tablet-width) {
       padding: 0;
@@ -188,11 +188,17 @@
 }
 
 .fieldset__container {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  position: relative;
 
   &--personality {
     display: flex;
     align-items: baseline;
+    top: -1px;
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+    }
   }
 
   &--phone {
@@ -211,21 +217,31 @@
   }
 
   &--email {
+    position: relative;
     margin-bottom: 28px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 0;
+      top: 5px;
     }
 
     @media (min-width: $desktop-width) {
       display: grid;
       align-items: baseline;
       grid-template-columns: max-content 1fr;
+      top: 0;
     }
   }
 
   &--patronymic {
-    margin-bottom: 0;
+    top: -1px;
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -305,14 +321,6 @@
 
     @media (min-width: $desktop-width) {
       padding-top: 18.5px;
-    }
-  }
-
-  &--patronymic {
-    margin-bottom: 25px;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 0;
     }
   }
 
@@ -396,22 +404,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;
   }
-
-  &--not-defined {
-    margin-bottom: 41px;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 0;
-    }
-  }
 }
 
 .fieldset__item-checkbox {
   margin-bottom: 54px;
-
-  &--red-rocks {
-    margin-bottom: 39px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
