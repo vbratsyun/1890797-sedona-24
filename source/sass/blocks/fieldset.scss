@@ -380,9 +380,14 @@
   @include list();
 
   &--checkbox {
+    width: 280px;
+    box-sizing: border-box;
+
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      width: 648px;
+      margin: 0 auto;
       padding: 0 91px;
       column-gap: 54px;
       row-gap: 62px;
@@ -392,6 +397,7 @@
     @media (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: repeat(4, auto);
+      width: 960px;
       padding: 0;
       column-gap: 66px;
     }
@@ -563,7 +569,8 @@
   background-color: $focus;
 }
 
-.fieldset__control-radio[type="radio"]:checked + .fieldset__control-mark--radio::before {
+.fieldset__control-radio[type="radio"]:checked
+  + .fieldset__control-mark--radio::before {
   display: block;
 }
 
