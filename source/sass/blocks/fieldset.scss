@@ -359,7 +359,7 @@
     left: 1px;
     margin: auto;
     position: absolute;
-    background: url("../../img/phone.svg") no-repeat;
+    background: url("../img/phone.svg") no-repeat;
   }
 
   &--email::after {
@@ -372,7 +372,7 @@
     left: 0;
     margin: auto;
     position: absolute;
-    background: url("../../img/mail.svg") no-repeat;
+    background: url("../img/mail.svg") no-repeat;
   }
 }
 

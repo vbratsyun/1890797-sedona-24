@@ -40,7 +40,7 @@
     top: 26px;
     left: 21px;
     margin: 0 auto;
-    background: url("../../img/icon-house.svg") no-repeat;
+    background: url("../img/icon-house.svg") no-repeat;
   }
 
   &--icon-gift::before {
@@ -51,7 +51,7 @@
     top: 15px;
     left: 25px;
     margin: 0 auto;
-    background: url("../../img/icon-gift.svg") no-repeat;
+    background: url("../img/icon-gift.svg") no-repeat;
   }
 
   &--icon-burger::before {
@@ -62,7 +62,7 @@
     top: 20px;
     left: 18px;
     margin: 0 auto;
-    background: url("../../img/icon-burger.svg") no-repeat;
+    background: url("../img/icon-burger.svg") no-repeat;
   }
 }
 
@@ -71,7 +71,7 @@
   background-color: $blue-gray;
 
   &--city {
-    background: url("../../img/advantage-triangle.svg"), $blue-gray;
+    background: url("../img/advantage-triangle.svg"), $blue-gray;
     background-repeat: no-repeat;
     background-size: 100% 37px;
 
@@ -365,7 +365,7 @@
 
     .advantage__item--icon-house::before {
       content: "";
-      background: url("../../img/icon-house-tablet.svg") no-repeat;
+      background: url("../img/icon-house-tablet.svg") no-repeat;
       width: 75px;
       height: 72px;
       position: absolute;
@@ -378,7 +378,7 @@
 
     .advantage__item--icon-gift::before {
       content: "";
-      background: url("../../img/icon-gift-tablet.svg") no-repeat;
+      background: url("../img/icon-gift-tablet.svg") no-repeat;
       width: 64px;
       height: 75px;
       position: absolute;
@@ -391,7 +391,7 @@
 
     .advantage__item--icon-burger::before {
       content: "";
-      background: url("../../img/icon-burger-tablet.svg") no-repeat;
+      background: url("../img/icon-burger-tablet.svg") no-repeat;
       width: 76px;
       height: 68px;
       position: absolute;
